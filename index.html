@@ -73,6 +73,9 @@
   section p:last-child{margin-bottom:0;}
   strong{font-weight:600;}
   .num{white-space:nowrap;}
+  .hoje{background:var(--panel);padding:1.5rem 1.35rem 1.6rem;
+    border-bottom:1px solid var(--rule);}
+  .hoje h2{margin-bottom:.75rem;}
   ol.agenda{list-style:none;margin:0;padding:0;}
   ol.agenda li{display:grid;grid-template-columns:3.5rem 1fr;gap:.75rem;
     padding:.6rem 0;border-bottom:1px solid var(--rule);}
@@ -80,6 +83,7 @@
   .hora{font-family:"Bodoni Moda",Georgia,serif;font-size:1.02rem;font-weight:600;color:var(--marine);}
   .ev{font-size:.94rem;}
   .ev small{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.4;margin-top:.1rem;}
+  .nota{margin:1rem 0 0;font-size:.88rem;color:var(--ink-soft);line-height:1.45;}
   .empresas{background:var(--panel);padding:1.4rem 1.35rem 1.5rem;margin-top:2rem;
     border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
   .empresas h2{margin-bottom:.9rem;}
@@ -114,8 +118,19 @@
   </div>
   <p class="date">quarta, 9 de setembro de 2026</p>
   <h1>O juro longo furou os 14% com o petróleo a caminho dos US$ 100</h1>
-  <p class="standfirst">A guerra escalou de novo à noite, com cinco petroleiros iranianos destruídos por forças americanas e o Brent encostando em US$ 99. O trade eleitoral ignorou tudo. Agenda do dia praticamente vazia.</p>
+  <p class="standfirst">A guerra escalou de novo à noite, com cinco petroleiros iranianos destruídos por forças americanas e o Brent encostando em US$ 99. O trade eleitoral ignorou tudo.</p>
 </header>
+
+<div class="hoje">
+  <h2>Agenda de hoje</h2>
+  <ol class="agenda">
+    <li><span class="hora">8h</span><span class="ev">IPC-S Capitais, primeira leitura de setembro<small>FGV</small></span></li>
+    <li><span class="hora">14h</span><span class="ev">Lagarde, em jantar do Bundesbank<small>Único destaque relevante lá fora</small></span></li>
+    <li><span class="hora">14h</span><span class="ev">Evento anual da Apple, em Nova York<small>Novos iPhones, com expectativa de um modelo dobrável</small></span></li>
+    <li><span class="hora">14h30</span><span class="ev">IC-Br de agosto e fluxo cambial semanal<small>Banco Central</small></span></li>
+  </ol>
+  <p class="nota">Na China, o CPI de agosto subiu 0,8% na comparação anual, em linha com o esperado, e o PPI avançou 3,8%, acima da projeção de 3,2%.</p>
+</div>
 
 <div class="strip">
   <dl class="quotes">
@@ -131,37 +146,25 @@
 <section class="pad">
   <div class="h-rule"></div>
   <h2>Juros</h2>
-  <p>A curva desarmou prêmio de 2027 em diante: o DI para janeiro de 2031 caiu quase 20 pontos-base e furou os 14%, a <span class="num">13,905%</span>, enquanto o de 2033 foi a <span class="num">14,015%</span> e o de 2027 ficou parado, em <span class="num">13,575%</span>. O gatilho foi eleitoral, não macro — o mercado precifica política fiscal mais austera a partir de 2027. O BofA cortou a projeção de Selic para 2027 de 12,75% para <span class="num">11,25%</span>, bem abaixo da mediana do Focus, de 12%. Lá fora o movimento foi o oposto: com o petróleo perto dos US$ 100 e o payroll forte, a Note de 10 anos subiu a <span class="num">4,792%</span> e a aposta principal para o Fed no dia 16 voltou a ser de alta.</p>
+  <p>O DI para janeiro de 2031 caiu quase 20 pontos-base e furou os 14%, a <span class="num">13,905%</span>; o de 2033 foi a <span class="num">14,015%</span>, enquanto o de 2027 ficou parado, em <span class="num">13,575%</span>. O gatilho foi eleitoral, não macro: a curva tira prêmio de 2027 em diante. O BofA cortou a Selic de 2027 de 12,75% para <span class="num">11,25%</span>, contra 12% no Focus. Lá fora o movimento foi o oposto — a Note de 10 anos subiu a <span class="num">4,792%</span>, e o Fed do dia 16 volta a ser aposta de alta.</p>
 </section>
 
 <section class="pad">
   <div class="h-rule"></div>
   <h2>Dólar</h2>
-  <p>Fechou a <span class="num">R$ 5,0858</span>, queda de <span class="num">0,88%</span>, depois de tocar R$ 5,0712 na mínima. O real ficou em segundo lugar entre as 33 moedas mais líquidas do mundo, atrás só do peso chileno, puxado pelo recorde do cobre. A moeda americana perdeu força de forma generalizada — o DXY caiu <span class="num">0,39%</span>, a 98,787 —, e o Rabobank atribui isso à intervenção do Tesouro nos Treasuries e à especulação sobre uma mudança estrutural no iene. Depois do fechamento, o BC anunciou um "casadão" para quinta, com venda à vista conjugada a swap reverso e ofertas de até US$ 1 bilhão, após o dólar casado rodar acima de 1,5%, nível considerado de estresse.</p>
+  <p>Fechou a <span class="num">R$ 5,0858</span>, queda de <span class="num">0,88%</span>, após tocar R$ 5,0712 na mínima. O real foi a segunda moeda mais forte entre as 33 mais líquidas, atrás só do peso chileno. O DXY caiu <span class="num">0,39%</span>, a 98,787. Depois do fechamento, o BC anunciou um "casadão" para quinta, de até US$ 1 bilhão, após o dólar casado rodar acima de 1,5% — nível considerado de estresse.</p>
 </section>
 
 <section class="pad">
   <div class="h-rule"></div>
   <h2>Bolsa</h2>
-  <p>O Ibovespa subiu <span class="num">1,20%</span>, aos <span class="num">187.366,84</span> pontos, com giro de <span class="num">R$ 21,2 bilhões</span>, depois de tocar 189.488 na máxima. A Petrobras acompanhou o petróleo, com ON <span class="num">+2,36%</span> e PN <span class="num">+2,08%</span>; a Vale subiu <span class="num">0,51%</span>, menos que o minério, e os bancos fecharam majoritariamente no azul. O movimento é doméstico: desde o início de setembro o EWZ acumula quase <span class="num">9%</span> de alta, contra <span class="num">2,3%</span> do EEM. O BofA elevou a recomendação para ações brasileiras de marketweight para overweight, e as posições em opções de EWZ chegaram ao maior nível desde 2007.</p>
+  <p>O Ibovespa subiu <span class="num">1,20%</span>, aos <span class="num">187.366,84</span> pontos, com giro de <span class="num">R$ 21,2 bilhões</span> e máxima em 189.488. Petrobras ON <span class="num">+2,36%</span> e PN <span class="num">+2,08%</span>, na esteira do petróleo; Vale <span class="num">+0,51%</span> e bancos quase todos no azul. O movimento é doméstico: o EWZ acumula quase <span class="num">9%</span> no mês, contra <span class="num">2,3%</span> do EEM. O BofA elevou o Brasil de marketweight para overweight.</p>
 </section>
 
 <section class="pad">
   <div class="h-rule"></div>
   <h2>Eleições</h2>
-  <p>A Quaest mostrou <strong>Lula e Flávio empatados em 41%</strong> no segundo turno, e a BTG/Nexus apontou 46% para o senador contra 45% do presidente. Nos levantamentos estaduais da Quaest, Flávio lidera numericamente nos três maiores colégios eleitorais: São Paulo (41% a 33%), Rio (43% a 37%) e Minas (40% a 37%), com Pernambuco como exceção, onde Lula tem 57% a 26%. A crise no STF virou combustível da campanha, depois que Mendonça afastou o diretor-geral da PF e o de Inteligência, a AGU recorreu e Fachin deu 72 horas para ele se manifestar. O teste continua: a AtlasIntel divulga nova pesquisa amanhã, e Datafolha e Veritá trazem novas rodadas na sexta.</p>
-</section>
-
-<section class="pad">
-  <div class="h-rule"></div>
-  <h2>Agenda</h2>
-  <ol class="agenda">
-    <li><span class="hora">8h</span><span class="ev">IPC-S Capitais, primeira leitura de setembro<small>Divulgação da FGV</small></span></li>
-    <li><span class="hora">14h</span><span class="ev">Christine Lagarde, em jantar do Bundesbank<small>Único destaque relevante lá fora</small></span></li>
-    <li><span class="hora">14h</span><span class="ev">Evento anual da Apple, em Nova York<small>Novos iPhones no centro, com expectativa de um modelo dobrável</small></span></li>
-    <li><span class="hora">14h30</span><span class="ev">IC-Br de agosto e fluxo cambial semanal<small>Banco Central</small></span></li>
-  </ol>
-  <p style="margin-top:1.1rem;font-size:.9rem;color:var(--ink-soft)">Na China, o CPI subiu 0,8% em agosto na comparação anual, em linha com o esperado. O PPI avançou 3,8%, acima da projeção de 3,2%.</p>
+  <p>A Quaest mostrou <strong>Lula e Flávio empatados em 41%</strong> no segundo turno; a BTG/Nexus apontou 46% a 45% para o senador. Nas estaduais da Quaest, Flávio lidera em São Paulo (41% a 33%), no Rio (43% a 37%) e em Minas (40% a 37%), com Pernambuco como exceção, onde Lula tem 57% a 26%. A crise no STF virou combustível da campanha, depois que Mendonça afastou a cúpula da PF e Fachin deu 72 horas para ele se manifestar. AtlasIntel divulga nova pesquisa amanhã; Datafolha e Veritá, na sexta.</p>
 </section>
 
 <div class="empresas">
