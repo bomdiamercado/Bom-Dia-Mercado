@@ -40,11 +40,11 @@
   .wrap{max-width:40rem;margin:0 auto;}
   .pad{padding:0 1.35rem;}
   header{background:var(--marine);color:#EDE9E0;padding:1.5rem 1.35rem 1.75rem;}
-  .masthead{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;
+  .masthead{display:flex;align-items:center;justify-content:space-between;gap:.75rem;
     border-bottom:1px solid rgba(237,233,224,.22);padding-bottom:.7rem;}
   .logo{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:.005em;}
-  .logo em{font-style:italic;font-weight:400;}
-  .date{font-size:.78rem;color:#A9BBC1;letter-spacing:.01em;}
+  .sun{flex:none;width:2rem;height:2rem;color:#E8B04B;}
+  .date{font-size:.78rem;color:#A9BBC1;letter-spacing:.01em;margin:.55rem 0 0;}
   h1{
     font-family:"Bodoni Moda",Georgia,serif;
     font-weight:600;
@@ -118,9 +118,13 @@
 
 <header>
   <div class="masthead">
-    <div class="logo">Bom <em>Dia</em> Mercado</div>
-    <div class="date">quarta, 9 de setembro de 2026</div>
+    <div class="logo">Bom Dia Mercado</div>
+    <svg class="sun" viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round">
+      <circle cx="24" cy="24" r="8.5" fill="currentColor" stroke="none"/>
+      <path d="M24 4.5v5M24 38.5v5M4.5 24h5M38.5 24h5M10.2 10.2l3.5 3.5M34.3 34.3l3.5 3.5M37.8 10.2l-3.5 3.5M13.7 34.3l-3.5 3.5"/>
+    </svg>
   </div>
+  <p class="date">quarta, 9 de setembro de 2026</p>
   <h1>O juro longo furou os 14% com o petróleo a caminho dos US$ 100</h1>
   <p class="standfirst">O trade eleitoral ignorou tudo o que veio de fora. E ganhou combustível novo com a crise no STF, que escalou com o afastamento da cúpula da PF por André Mendonça. Agenda do dia praticamente vazia.</p>
 </header>
