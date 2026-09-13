@@ -85,8 +85,9 @@
     border-bottom:1px solid var(--rule);}
   .hoje h2{margin-bottom:.75rem;}
   ol.agenda{list-style:none;margin:0;padding:0;}
-  ol.agenda li{display:grid;grid-template-columns:3.5rem 1fr;gap:.75rem;
-    padding:.6rem 0;border-bottom:1px solid var(--rule);}
+  ol.agenda li{display:grid;grid-template-columns:1.5rem 3.3rem 1fr;gap:.6rem;
+    align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--rule);}
+  .bandeira{font-size:1.05rem;line-height:1;}
   ol.agenda li:last-child{border-bottom:none;}
   .hora{font-size:.98rem;font-weight:700;color:var(--marine);}
   .ev{font-size:.94rem;}
@@ -152,10 +153,10 @@
 <div class="hoje">
   <h2>AGENDA DE HOJE</h2>
   <ol class="agenda">
-    <li><span class="hora">8h</span><span class="ev">IPC-S Capitais, primeira leitura de setembro<small>FGV</small></span></li>
-    <li><span class="hora">14h</span><span class="ev">Lagarde, em jantar do Bundesbank<small>Único destaque relevante lá fora</small></span></li>
-    <li><span class="hora">14h</span><span class="ev">Evento anual da Apple, em Nova York<small>Novos iPhones, com expectativa de um modelo dobrável</small></span></li>
-    <li><span class="hora">14h30</span><span class="ev">IC-Br de agosto e fluxo cambial semanal<small>Banco Central</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">8h00</span><span class="ev">IPC-S Capitais, primeira leitura de setembro<small>FGV</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Zona do euro">🇪🇺</span><span class="hora">14h00</span><span class="ev">Lagarde, em jantar do Bundesbank<small>Único destaque relevante lá fora</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Estados Unidos">🇺🇸</span><span class="hora">14h00</span><span class="ev">Evento anual da Apple, em Nova York<small>Novos iPhones, com expectativa de um modelo dobrável</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">14h30</span><span class="ev">IC-Br de agosto e fluxo cambial semanal<small>Banco Central</small></span></li>
   </ol>
   <p class="nota">Na China, o CPI de agosto subiu 0,8% na comparação anual, em linha com o esperado, e o PPI avançou 3,8%, acima da projeção de 3,2%.</p>
 </div>
