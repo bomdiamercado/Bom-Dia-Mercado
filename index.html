@@ -1,1 +1,252 @@
 
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bom Dia Mercado — 11 de setembro de 2026</title>
+<meta name="description" content="Resumo do mercado: CPI decide o Fed com Brent a US$ 107, juro de 10 anos em 4,95% e eleição descolando o Brasil da aversão a risco.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Bom Dia Mercado">
+<meta property="og:title" content="Bom Dia Mercado — 11 de setembro de 2026">
+<meta property="og:description" content="CPI decide o Fed, com petróleo a US$ 107 e o juro de 10 anos batendo em 5%. No Brasil, o trade eleitoral segura os ativos numa bolha própria.">
+<meta property="og:url" content="https://mauriciopiragibe.github.io/Bom-Dia-Mercado/">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,600;6..96,700&family=Archivo:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --marine:#12333F;
+    --marine-deep:#0D262F;
+    --paper:#E9E6DE;
+    --panel:#F4F2EC;
+    --ink:#1A2328;
+    --ink-soft:#4E5A5F;
+    --rule:#C9C4B8;
+    --amber:#C98A1E;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:"Archivo",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:16.5px;
+    line-height:1.55;
+    font-feature-settings:"tnum" 1;
+  }
+  .wrap{max-width:40rem;margin:0 auto;}
+  .pad{padding:0 1.35rem;}
+  header{background:var(--marine);color:#EDE9E0;padding:1.5rem 1.35rem 1.75rem;}
+  .masthead{display:flex;align-items:baseline;justify-content:space-between;gap:.75rem;
+    border-bottom:1px solid rgba(237,233,224,.22);padding-bottom:.7rem;}
+  .logo{font-family:"Bodoni Moda",Georgia,serif;font-weight:700;font-size:1.2rem;letter-spacing:.005em;}
+  .logo em{font-style:italic;font-weight:400;}
+  .date{font-size:.78rem;color:#A9BBC1;letter-spacing:.01em;}
+  h1{
+    font-family:"Bodoni Moda",Georgia,serif;
+    font-weight:600;
+    font-size:2.05rem;
+    line-height:1.13;
+    letter-spacing:-.012em;
+    margin:1.15rem 0 .65rem;
+  }
+  .standfirst{color:#B7C8CE;font-size:.98rem;line-height:1.5;margin:0;max-width:30rem;}
+  .strip{background:var(--marine-deep);color:#EDE9E0;padding:1.1rem 1.35rem 1.25rem;}
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem .9rem;margin:0;}
+  .q{margin:0;}
+  .q dt{font-size:.73rem;color:#93A8AF;margin-bottom:.15rem;}
+  .q dd{margin:0;font-family:"Bodoni Moda",Georgia,serif;font-size:1.55rem;line-height:1;font-weight:600;}
+  .q .chg{font-family:"Archivo",sans-serif;font-size:.78rem;font-weight:500;display:block;margin-top:.3rem;}
+  .up{color:#5FC79A;} .down{color:#F0897E;}
+  main{padding-bottom:1rem;}
+  section{padding-top:1.9rem;}
+  h2{
+    font-family:"Bodoni Moda",Georgia,serif;
+    font-size:1.32rem;font-weight:600;line-height:1.2;
+    margin:0 0 .2rem;letter-spacing:-.008em;
+  }
+  .kicker{font-size:.8rem;color:var(--ink-soft);margin:0 0 .85rem;}
+  .h-rule{height:3px;width:2.2rem;background:var(--marine);margin-bottom:.55rem;}
+  p{margin:0 0 .85rem;}
+  section p:last-child{margin-bottom:0;}
+  strong{font-weight:600;}
+  .num{white-space:nowrap;}
+  ul.points{list-style:none;margin:0;padding:0;}
+  ul.points li{position:relative;padding-left:1.15rem;margin-bottom:.7rem;}
+  ul.points li::before{content:"";position:absolute;left:0;top:.62em;width:.42rem;height:.42rem;background:var(--amber);}
+  ul.points li:last-child{margin-bottom:0;}
+  table{width:100%;border-collapse:collapse;font-size:.9rem;margin:.2rem 0 0;}
+  caption{text-align:left;font-size:.8rem;color:var(--ink-soft);padding-bottom:.45rem;}
+  th,td{text-align:right;padding:.42rem .1rem;border-bottom:1px solid var(--rule);}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{font-size:.74rem;font-weight:500;color:var(--ink-soft);border-bottom:1.5px solid var(--marine);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.v{font-variant-numeric:tabular-nums;}
+  ol.agenda{list-style:none;margin:0;padding:0;}
+  ol.agenda li{display:grid;grid-template-columns:3.5rem 1fr;gap:.75rem;
+    padding:.6rem 0;border-bottom:1px solid var(--rule);}
+  ol.agenda li:last-child{border-bottom:none;}
+  .hora{font-family:"Bodoni Moda",Georgia,serif;font-size:1.02rem;font-weight:600;color:var(--marine);}
+  .ev{font-size:.94rem;}
+  .ev small{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.4;margin-top:.1rem;}
+  .empresas{background:var(--panel);padding:1.4rem 1.35rem 1.5rem;margin-top:2rem;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .empresas h2{margin-bottom:.9rem;}
+  .empresas dl{margin:0;}
+  .empresas dt{font-weight:600;font-size:.88rem;margin-top:.75rem;}
+  .empresas dt:first-of-type{margin-top:0;}
+  .empresas dd{margin:.05rem 0 0;font-size:.9rem;color:var(--ink-soft);line-height:1.45;}
+  footer{padding:1.6rem 1.35rem 2.4rem;font-size:.8rem;color:var(--ink-soft);line-height:1.5;}
+  footer p{margin:0 0 .4rem;}
+  @media (min-width:34rem){
+    body{font-size:17px;}
+    h1{font-size:2.6rem;}
+    .quotes{grid-template-columns:repeat(4,1fr);}
+    .q dd{font-size:1.45rem;}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    header h1{animation:rise .5s ease-out both;}
+    @keyframes rise{from{opacity:0;transform:translateY(.5rem);}to{opacity:1;transform:none;}}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="masthead">
+    <div class="logo">Bom <em>Dia</em> Mercado</div>
+    <div class="date">sexta, 11 de setembro de 2026</div>
+  </div>
+  <h1>O CPI decide o Fed, com petróleo a US$ 107 e o juro de 10 anos batendo em 5%</h1>
+  <p class="standfirst">Lá fora, guerra no Oriente Médio e inflação empurrando os Treasuries. Aqui, o trade eleitoral segura os ativos numa bolha própria — IPCA com deflação e Datafolha depois do fechamento.</p>
+</header>
+
+<div class="strip">
+  <dl class="quotes">
+    <div class="q"><dt>Brent</dt><dd>107,63</dd><span class="chg up">+6,34%</span></div>
+    <div class="q"><dt>Treasury 10 anos</dt><dd>4,950%</dd><span class="chg up">+11 pb</span></div>
+    <div class="q"><dt>Ibovespa</dt><dd>188.269</dd><span class="chg up">+1,42%</span></div>
+    <div class="q"><dt>Dólar</dt><dd>5,1027</dd><span class="chg down">−0,19%</span></div>
+  </dl>
+</div>
+
+<main>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>O que move o dia</h2>
+  <p class="kicker">Quatro coisas para ter na cabeça antes da abertura</p>
+  <ul class="points">
+    <li>O <strong>CPI de agosto</strong>, às 9h30, é o teste final para a alta de juro do Fed na quarta. Mediana do Projeções Broadcast: <span class="num">+0,4%</span> no mês e <span class="num">3,4%</span> em 12 meses; núcleo <span class="num">+0,2%</span>, desacelerando para <span class="num">2,4%</span>.</li>
+    <li>O <strong>IPCA</strong>, às 9h, deve vir em deflação de <span class="num">0,29%</span>, puxado pelo bônus de Itaipu na conta de luz. Em 12 meses, cai de <span class="num">4,44%</span> para <span class="num">4,26%</span>.</li>
+    <li>O <strong>Brent rompeu US$ 100</strong> e a oferta já está sendo atingida: a Arábia Saudita informou à Opep queda de <span class="num">1,9 milhão de barris/dia</span> em agosto, o menor nível desde 1990.</li>
+    <li>Depois do fechamento sai o <strong>Datafolha</strong>. A AtlasIntel de ontem já mostrou empate técnico e foi o gatilho do rali doméstico.</li>
+  </ul>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Guerra longa</h2>
+  <p class="kicker">Petróleo</p>
+  <p>A escalada no Oriente Médio levou o Brent a <span class="num">US$ 107,63</span> (+6,34%) e o WTI a <span class="num">US$ 102,48</span> (+6,7%), máximas em três meses. Depois do fechamento, a UKMTO relatou dois navios atingidos por projéteis perto de Omã.</p>
+  <p>No Estreito de Ormuz, a Guarda Revolucionária diz ter destruído uma embarcação americana não tripulada e repetiu a ameaça de atacar qualquer presença considerada hostil. No Iêmen, os Houthis tomaram a cidade portuária de Mokha, ampliando o controle perto de Bab al-Mandeb, e lançaram novo ataque com mísseis contra o sul da Arábia Saudita.</p>
+  <p>Segundo o Wall Street Journal, o Irã retomou a produção de mísseis balísticos em instalações subterrâneas, e assessores teriam alertado Trump de que o conflito pode se arrastar até 2029. Trump mantém a previsão de fim da guerra após as eleições de novembro e disse não se arrepender de ter começado o confronto em fevereiro. No campo econômico, o Tesouro americano ampliou sanções a redes ligadas a Teerã, ao Hezbollah e ao Kataib Hezbollah, e Bessent adiantou que um "grande banco" será sancionado na segunda-feira.</p>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Perto dos 5%</h2>
+  <p class="kicker">Fed e Treasuries</p>
+  <p>O PPI de quinta veio praticamente em linha (<span class="num">+0,4%</span> no mês, <span class="num">5,4%</span> em 12 meses; núcleo <span class="num">+0,2%</span> e <span class="num">4,6%</span>), mas a alta de tarifas aéreas e saúde incomodou. As apostas em aperto subiram: o CME já dá quase <strong>70% de chance</strong> de mais 25 pontos-base em setembro, contra 60% na véspera.</p>
+  <p>O ING avalia que o choque de energia deve vazar para o núcleo via fretes e passagens, o suficiente para uma alta preventiva do Fed — e vê o juro de 10 anos rompendo os 5%, com a discussão de 6% entrando no radar. O BofA também espera CPI firme o bastante para justificar o aperto. A Capital Economics lembra que parte do mercado trata os 5% como divisor de águas para uma correção mais forte nos ativos, embora não considere o patamar um número mágico.</p>
+  <p>Depois do BCE, que subiu o juro em 25 pontos para <span class="num">2,50%</span>, o próximo da fila é o BoJ, na semana que vem, logo após o Fed.</p>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Mundo à parte</h2>
+  <p class="kicker">O trade eleitoral</p>
+  <p>Nem a disparada do petróleo nem o estresse dos Treasuries impediram o rali doméstico. O Ibovespa subiu <span class="num">1,42%</span>, aos <span class="num">188.269</span> pontos, com giro de <span class="num">R$ 22,9 bilhões</span>; das 76 ações do índice, só sete fecharam no vermelho. O dólar furou os R$ 5,10 na mínima e o real ficou entre as três moedas de melhor desempenho do mundo. No mês, a bolsa acumula mais de <span class="num">6%</span> de alta e o dólar cai <span class="num">1,5%</span>.</p>
+  <p>O gatilho foi a AtlasIntel: <strong>Flávio Bolsonaro cresceu 3,8 pontos e empatou com Lula</strong>, 46,4% a 46,2%. O mercado vem lendo o fortalecimento da oposição como chance de virada na política fiscal em 2027.</p>
+  <p>A Eurasia reduziu de 60% para 55% a probabilidade de vitória de Lula e diz que a eleição está especialmente difícil de prever, porque seus modelos apontam em direções opostas: a vantagem histórica de quem disputa a reeleição favorece Lula, enquanto segurança, corrupção e pessimismo com o futuro beneficiam a oposição. No Agro Summit do Bradesco BBI, Christopher Garman resumiu o clima eleitoral como abandono, com um nível de pessimismo que não via há muito tempo nas pesquisas.</p>
+  <p>Na Petrobras ficou o melhor giro individual (R$ 2 bilhões), com o JPMorgan liderando as compras — a estatal está a cerca de R$ 6 bilhões do recorde de valor de mercado de abril. Entre os bancos, Bradesco PN <span class="num">+3,88%</span>, BB ON <span class="num">+2,80%</span>, BTG unit <span class="num">+2,35%</span> e Itaú PN <span class="num">+1,83%</span>. Vale caiu <span class="num">1,10%</span>, junto com o minério.</p>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Fiscal e STF</h2>
+  <p class="kicker">Brasília</p>
+  <p>Pressionado nas pesquisas, Lula entrou nos dois temas que pesam sobre a campanha. Em entrevista ao SBT News, disse que Moraes e Mendonça têm que pagar se forem considerados culpados nas investigações do Banco Master, elogiou Fachin pela tentativa de colocar ordem na casa e relembrou que Vorcaro foi preso e o banco fechado no seu governo. Sobre as contas públicas, afirmou que no seu governo o ajuste é feito na prática, reivindicou 12 anos de mandato como prova de responsabilidade fiscal e atacou o mercado: <q>a Faria Lima só chora</q>.</p>
+  <p>À noite, Fachin determinou a Mendonça o levantamento do sigilo do caso Master e o envio de todos os procedimentos aos demais ministros — as mensagens entre Moraes e Vorcaro derivam desse processo. O relatório da Polícia Federal vai a plenário na <strong>terça-feira, 15</strong>. Flávio, por sua vez, disse na live semanal que indicará cinco ministros ao STF, e possivelmente um sexto, e criticou a operação da PF sobre o financiamento do filme "Dark Horse".</p>
+  <p>Em debate da Meridiana, Ana Paula Vescovi voltou a falar em dívida explosiva e num Estado tomado por despesas obrigatórias que crescem sozinhas, argumentando que o juro neutro global mais alto agrava o problema. Elena Landau disse que Orçamento e LDO deixaram de funcionar como instrumentos de planejamento e defendeu a volta da reforma da Previdência ao centro da agenda.</p>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Fechamento de ontem</h2>
+  <table>
+    <caption>Juros futuros, ajuste anterior entre parênteses</caption>
+    <thead>
+      <tr><th scope="col">Contrato</th><th scope="col">Taxa</th><th scope="col">Anterior</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>DI jan/27</td><td class="v">13,595%</td><td class="v">13,572%</td></tr>
+      <tr><td>DI jan/28</td><td class="v">13,615%</td><td class="v">13,629%</td></tr>
+      <tr><td>DI jan/29</td><td class="v">13,810%</td><td class="v">13,860%</td></tr>
+      <tr><td>DI jan/31</td><td class="v">14,010%</td><td class="v">14,091%</td></tr>
+      <tr><td>DI jan/33</td><td class="v">14,135%</td><td class="v">14,204%</td></tr>
+    </tbody>
+  </table>
+  <p style="margin-top:1.4rem">Nos Estados Unidos, o movimento foi o inverso: a Note de 10 anos foi a <span class="num">4,950%</span> (de 4,838%), o T-Bond de 30 anos a <span class="num">5,363%</span> (de 5,288%) e o de 2 anos a <span class="num">4,565%</span> (de 4,425%). A pressão concentrada na ponta longa, num momento em que o Fed parece mais hawkish, é lida como provocação a Bessent — a recompra de US$ 5,19 bilhões pelo Tesouro ficou abaixo do teto anunciado e bem abaixo do que se especulava.</p>
+  <p>Quarto pregão negativo em Wall Street: Dow <span class="num">−0,60%</span> (52.064,10), S&amp;P 500 <span class="num">−0,58%</span> (7.591,70) e Nasdaq <span class="num">−0,65%</span> (26.081,72), com Nvidia caindo mais de 2%. O DXY cruzou os 99 mil pontos (<span class="num">+0,23%</span>, a 99,048), o euro recuou a <span class="num">US$ 1,1609</span>, a libra a <span class="num">US$ 1,3509</span> e o iene foi a <span class="num">154,32</span>.</p>
+  <p>No radar doméstico, a pesquisa de serviços do IBGE veio estável em julho, abaixo da previsão de 0,2%, antecipando PIB trimestral mais fraco e reforçando a perspectiva de corte da Selic.</p>
+</section>
+
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>Agenda</h2>
+  <ol class="agenda">
+    <li><span class="hora">6h</span><span class="ev">Relatório mensal da AIE<small>Ganha peso com a escalada de preços e os problemas de oferta</small></span></li>
+    <li><span class="hora">9h</span><span class="ev">IPCA de agosto<small>Mediana de −0,29%; todas as estimativas apontam deflação, entre −0,37% e −0,20%</small></span></li>
+    <li><span class="hora">9h30</span><span class="ev">CPI de agosto nos EUA<small>+0,4% no mês, 3,4% em 12 meses; núcleo +0,2% e 2,4%</small></span></li>
+    <li><span class="hora">11h</span><span class="ev">Michigan, prévia de setembro<small>Previsão de alta de 51,7 para 52,5, com expectativas de inflação de 1 e 5 anos</small></span></li>
+    <li><span class="hora">após</span><span class="ev">Datafolha<small>Divulgação depois do fechamento dos mercados</small></span></li>
+  </ol>
+  <p style="margin-top:1.1rem;font-size:.9rem;color:var(--ink-soft)">Galípolo retorna de Mumbai, onde participou da reunião de ministros das Finanças e presidentes de bancos centrais do BRICS.</p>
+</section>
+
+<div class="empresas">
+  <h2>Companhias</h2>
+  <dl>
+    <dt>Oracle</dt><dd>Subiu 4,13% no after hours após superar expectativas de lucro e receita. Infraestrutura em nuvem cresceu 121% e a empresa fechou mais de US$ 30 bilhões em novos contratos de nuvem para IA no trimestre. Manteve a receita anual em pelo menos US$ 90 bilhões e elevou a projeção de lucro por ação de US$ 8,05 para US$ 8,10.</dd>
+    <dt>Petrobras</dt><dd>Acordo de três anos com a PPSA para comercializar o gás natural da União no pré-sal, viabilizando o primeiro leilão, previsto para outubro.</dd>
+    <dt>Itaú</dt><dd>Emitiu R$ 5 bilhões em letras financeiras subordinadas com vencimento em 2036 e 2037; impacto estimado de 0,3 ponto no capital nível 2.</dd>
+    <dt>Caixa e Banco do Brasil</dt><dd>Paralisações de bancários por impasse nas negociações. Na Caixa, a greve é nacional e por tempo indeterminado; no BB, a adesão é parcial.</dd>
+    <dt>Axia Energia</dt><dd>13ª emissão de debêntures de R$ 1,5 bilhão, podendo chegar a R$ 2 bilhões, prazo de sete anos, para rolagem de dívida.</dd>
+    <dt>Âmbar Energia</dt><dd>Investirá R$ 5,5 bilhões na distribuição de energia no Amazonas até 2031, sendo R$ 3,9 bilhões de capital próprio.</dd>
+    <dt>Rede D'Or</dt><dd>Itaú BBA elevou o preço-alvo de R$ 50 para R$ 53 e manteve compra, citando rentabilidade resiliente dos hospitais e perspectivas para a SulAmérica.</dd>
+    <dt>Bradesco Saúde</dt><dd>Citi reiterou compra e alvo de R$ 19, com potencial de 22,5% e dividend yield projetado de 8%.</dd>
+    <dt>Hypera</dt><dd>Citi reiterou compra e alvo de R$ 28, destacando o potencial do Semavy e a melhora esperada na geração de caixa.</dd>
+    <dt>3tentos</dt><dd>S&amp;P rebaixou o rating de brAA para brA+, perspectiva negativa, citando piora de rentabilidade e liquidez e risco de novo corte.</dd>
+    <dt>Alpargatas</dt><dd>Emissão de R$ 300 milhões em debêntures, prazo de seis anos, majoritariamente para refinanciar dívida.</dd>
+    <dt>Copasa</dt><dd>Pagará R$ 96,9 milhões em JCP, R$ 0,255646 por ação. Papéis ficam ex em 22/9.</dd>
+    <dt>Gerdau</dt><dd>BofA reduziu a participação de 5,04% para 4,12% das ações PN.</dd>
+    <dt>GPA</dt><dd>Helene Bitton renunciou ao conselho e será substituída por Yann Fourmy. Fabiana Zotini foi eleita diretora jurídica.</dd>
+  </dl>
+</div>
+
+</main>
+
+<footer>
+  <p>Resumo do Bom Dia Mercado de 11 de setembro de 2026, com base no material do Broadcast/Agência Estado (Rosa Riscala e Mariana Ciscato; PSC por Gabriel Hirabahasi e Gabriel de Sousa).</p>
+  <p>Preços e taxas referem-se ao fechamento de quinta-feira, 10 de setembro.</p>
+</footer>
+
+</div>
+</body>
+</html>
