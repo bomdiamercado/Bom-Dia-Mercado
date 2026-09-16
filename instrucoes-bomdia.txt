@@ -20,6 +20,8 @@ REGRAS DE ESCRITA
 
 LOGO: Bom Dia Mercado
 
+MANTENHA o <svg class="sun"> do cabeçalho, exatamente como está no modelo.
+
 SEÇÕES, nesta ordem: JUROS, DÓLAR, BOLSA, ELEIÇÕES, PETRÓLEO, PETROBRAS.
 
 PETROBRAS recebe apenas notícia corporativa da companhia: fato relevante, contrato, produção, emissão, dividendo. Variação da ação não conta. Se não houver nada no texto, escreva exatamente: Nenhuma notícia relevante.

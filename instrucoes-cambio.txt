@@ -20,6 +20,8 @@ REGRAS DE ESCRITA
 
 LOGO: Relatório de Câmbio
 
+APAGUE o <svg class="sun"> do cabeçalho. Este relatório não leva o sol.
+
 RECORTE: só câmbio. Aproveite do boletim apenas o que afeta a formação da taxa — cotações e variações de moedas, fluxo cambial, atuação do Banco Central, DXY e pares relevantes, diferencial de juros e carry trade, balança comercial e conta corrente, e os eventos que podem mover o câmbio adiante. Ignore bolsa, ações individuais, notícias corporativas e política sem leitura cambial direta.
 
 SEÇÕES, nesta ordem: FECHAMENTO, DÓLAR NO MUNDO, FLUXO, BANCO CENTRAL, NO RADAR.
