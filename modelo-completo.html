@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ========== TROCAR A CADA EDIÇÃO ========== -->
+<title>Relatório de Câmbio — 00/00/0000</title>
+<meta name="description" content="Resumo de uma linha, que aparece na prévia do link.">
+<meta property="og:title" content="Relatório de Câmbio — 00/00/0000">
+<meta property="og:description" content="Resumo de uma linha, que aparece na prévia do link.">
+<!-- ========================================== -->
+
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Relatório de Câmbio">
+<meta property="og:locale" content="pt_BR">
+<meta name="twitter:card" content="summary_large_image">
+<!-- Se a página for interna, deixe a linha abaixo. Se for pública, apague. -->
+<meta name="robots" content="noindex, nofollow">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+    --marine:#12333F;
+    --marine-deep:#0D262F;
+    --paper:#E9E6DE;
+    --panel:#F4F2EC;
+    --ink:#1A2328;
+    --ink-soft:#4E5A5F;
+    --rule:#C9C4B8;
+    --amber:#C98A1E;
+  }
+  *{box-sizing:border-box;}
+  html{-webkit-text-size-adjust:100%;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:Calibri,"Carlito",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+    font-size:16.5px;
+    line-height:1.55;
+    font-feature-settings:"tnum" 1;
+  }
+  .wrap{max-width:40rem;margin:0 auto;}
+  .pad{padding:0 1.35rem;}
+  header{background:var(--marine);color:#EDE9E0;padding:1.5rem 1.35rem 1.75rem;}
+  .masthead{display:flex;align-items:center;justify-content:space-between;gap:.75rem;
+    border-bottom:1px solid rgba(237,233,224,.22);padding-bottom:.7rem;}
+  .logo{font-weight:700;font-size:1.15rem;text-transform:uppercase;letter-spacing:.07em;}
+  .sun{flex:none;width:2rem;height:2rem;color:#E8B04B;}
+  .date{font-size:.78rem;color:#A9BBC1;letter-spacing:.01em;margin:.55rem 0 0;}
+  h1{
+    font-weight:700;
+    font-size:1.62rem;
+    line-height:1.25;
+    text-transform:uppercase;
+    letter-spacing:.015em;
+    margin:1.15rem 0 .65rem;
+  }
+  .standfirst{color:#B7C8CE;font-size:.98rem;line-height:1.5;margin:0;max-width:30rem;
+    text-align:justify;hyphens:auto;-webkit-hyphens:auto;}
+  .strip{background:var(--marine-deep);color:#EDE9E0;padding:1.1rem 1.35rem 1.25rem;}
+  .quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem .9rem;margin:0;}
+  .q{margin:0;}
+  .q dt{font-size:.73rem;color:#93A8AF;margin-bottom:.15rem;}
+  .q dd{margin:0;font-size:1.5rem;line-height:1;font-weight:600;}
+  .q .chg{font-size:.78rem;font-weight:500;display:block;margin-top:.3rem;}
+  .up{color:#5FC79A;} .down{color:#F0897E;}
+  main{padding-bottom:1rem;}
+  section{padding-top:1.9rem;}
+  h2{
+    font-size:1.05rem;font-weight:700;line-height:1.25;
+    text-transform:uppercase;letter-spacing:.06em;
+    margin:0 0 .55rem;
+  }
+  .h-rule{height:3px;width:2.2rem;background:var(--marine);margin-bottom:.55rem;}
+  p{margin:0 0 .85rem;}
+  section p{text-align:justify;hyphens:auto;-webkit-hyphens:auto;}
+  section p:last-child{margin-bottom:0;}
+  strong{font-weight:600;}
+  .num{white-space:nowrap;}
+  .hoje{background:var(--panel);padding:1.5rem 1.35rem 1.6rem;
+    border-bottom:1px solid var(--rule);}
+  .hoje h2{margin-bottom:.75rem;}
+  ol.agenda{list-style:none;margin:0;padding:0;}
+  ol.agenda li{display:grid;grid-template-columns:1.5rem 3.3rem 1fr;gap:.6rem;
+    align-items:baseline;padding:.6rem 0;border-bottom:1px solid var(--rule);}
+  .bandeira{font-size:1.05rem;line-height:1;}
+  ol.agenda li:last-child{border-bottom:none;}
+  .hora{font-size:.98rem;font-weight:700;color:var(--marine);}
+  .ev{font-size:.94rem;}
+  .ev small{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.4;margin-top:.1rem;}
+  .nota{margin:1rem 0 0;font-size:.88rem;color:var(--ink-soft);line-height:1.45;}
+  .empresas{background:var(--panel);padding:1.4rem 1.35rem 1.5rem;margin-top:2rem;
+    border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
+  .empresas h2{margin-bottom:.9rem;}
+  .empresas dl{margin:0;}
+  .empresas dt{font-weight:600;font-size:.88rem;margin-top:.75rem;}
+  .empresas dt:first-of-type{margin-top:0;}
+  .empresas dd{margin:.05rem 0 0;font-size:.9rem;color:var(--ink-soft);line-height:1.45;}
+  @media (min-width:34rem){
+    body{font-size:17px;}
+    h1{font-size:2.05rem;}
+    .quotes{grid-template-columns:repeat(4,1fr);}
+    .q dd{font-size:1.45rem;}
+  }
+  @media (prefers-reduced-motion:no-preference){
+    header h1{animation:rise .5s ease-out both;}
+    @keyframes rise{from{opacity:0;transform:translateY(.5rem);}to{opacity:1;transform:none;}}
+  }
+  table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.2rem 0 0;}
+  caption{text-align:left;font-size:.8rem;color:var(--ink-soft);padding-bottom:.45rem;}
+  th,td{text-align:right;padding:.42rem .15rem;border-bottom:1px solid var(--rule);
+    font-variant-numeric:tabular-nums;}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{font-size:.72rem;font-weight:700;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:.03em;border-bottom:1.5px solid var(--marine);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.alta{color:#1B6B4A;} td.baixa{color:#A32B22;}
+  .grafico{margin:.4rem 0 0;}
+  .grafico svg{width:100%;height:auto;display:block;}
+  .legenda{font-size:.78rem;color:var(--ink-soft);margin:.5rem 0 0;}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+
+<!-- ================= CABEÇALHO ================= -->
+<header>
+  <div class="masthead">
+    <div class="logo">Relatório de Câmbio</div>
+  </div>
+  <p class="date">Dia-da-semana, 00 de mês de 0000</p>
+  <h1>Manchete do dia, em uma linha</h1>
+  <p class="standfirst">Parágrafo de abertura: o que aconteceu e por que importa. Duas ou três frases.</p>
+</header>
+
+
+<!-- ================= PAINEL DE COTAÇÕES =================
+     Sempre quatro blocos. Classe "up" para alta, "down" para queda.
+     Use o sinal − (menos tipográfico) nas quedas, não o hífen.        -->
+<div class="strip">
+  <dl class="quotes">
+    <div class="q"><dt>Nome</dt><dd>0,0000</dd><span class="chg up">+0,00%</span></div>
+    <div class="q"><dt>Nome</dt><dd>0,0000</dd><span class="chg down">−0,00%</span></div>
+    <div class="q"><dt>Nome</dt><dd>0,0000</dd><span class="chg up">+0,00%</span></div>
+    <div class="q"><dt>Nome</dt><dd>0,0000</dd><span class="chg down">−0,00%</span></div>
+  </dl>
+</div>
+
+
+<!-- ================= AGENDA (opcional) =================
+     Apague o bloco inteiro se não houver agenda.
+     Bandeiras: 🇧🇷 🇺🇸 🇪🇺 🇨🇳 🇯🇵 🇬🇧
+     Horário sempre com minutos: 8h00, 14h30. Sem hora definida: "no dia".  -->
+<div class="hoje">
+  <h2>AGENDA DE HOJE</h2>
+  <ol class="agenda">
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">0h00</span><span class="ev">Evento<small>Detalhe curto</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Estados Unidos">🇺🇸</span><span class="hora">0h00</span><span class="ev">Evento<small>Detalhe curto</small></span></li>
+  </ol>
+  <p class="nota">Linha extra, se houver. Apague se não usar.</p>
+</div>
+
+
+<main>
+
+<!-- ================= SEÇÃO DE TEXTO =================
+     Copie o bloco abaixo quantas vezes precisar.
+     Título sempre em MAIÚSCULAS. Um parágrafo por seção.
+     Números entram em <span class="num"> para não quebrarem de linha.  -->
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>TÍTULO DA SEÇÃO</h2>
+  <p>Texto da seção. Exemplo de número protegido: <span class="num">R$ 5,1254</span>, <span class="num">4,90%</span>, <span class="num">US$ 108</span>.</p>
+</section>
+
+
+<!-- ================= TABELA (opcional) ================= -->
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>TÍTULO DA TABELA</h2>
+  <table>
+    <caption>Legenda da tabela</caption>
+    <thead>
+      <tr><th scope="col">Indicador</th><th scope="col">2026</th><th scope="col">2027</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Linha</td><td>0,00</td><td>0,00</td></tr>
+      <tr><td>Linha</td><td>0,00</td><td>0,00</td></tr>
+    </tbody>
+  </table>
+  <p class="nota">Fonte: ...</p>
+</section>
+
+
+<!-- ================= GRÁFICO DE LINHA (opcional) =================
+     Para trocar os valores, ajuste APENAS os pontos abaixo.
+     Conversão do valor para a coordenada y, nesta escala de 5,00 a 5,40:
+         y = 190 − (valor − 5,00) ÷ 0,40 × 150
+     Exemplos: 5,00 → 190   5,10 → 152,5   5,20 → 115   5,30 → 77,5   5,40 → 40
+     O x de cada trimestre é fixo: 80, 170, 260, 340.                     -->
+<section class="pad">
+  <div class="h-rule"></div>
+  <h2>TÍTULO DO GRÁFICO</h2>
+  <div class="grafico">
+  <svg viewBox="0 0 380 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Descreva aqui o que o gráfico mostra">
+    <g stroke="#C9C4B8" stroke-width="1">
+      <line x1="52" y1="190" x2="360" y2="190"/>
+      <line x1="52" y1="152.5" x2="360" y2="152.5"/>
+      <line x1="52" y1="115" x2="360" y2="115"/>
+      <line x1="52" y1="77.5" x2="360" y2="77.5"/>
+      <line x1="52" y1="40" x2="360" y2="40"/>
+    </g>
+    <g font-size="10" fill="#4E5A5F" text-anchor="end">
+      <text x="46" y="193">5,00</text>
+      <text x="46" y="155.5">5,10</text>
+      <text x="46" y="118">5,20</text>
+      <text x="46" y="80.5">5,30</text>
+      <text x="46" y="43">5,40</text>
+    </g>
+    <polyline points="80,115 170,115 260,111.25 340,111.25" fill="none" stroke="#12333F" stroke-width="2.5" stroke-linejoin="round"/>
+    <g fill="#12333F">
+      <circle cx="80" cy="115" r="4"/><circle cx="170" cy="115" r="4"/>
+      <circle cx="260" cy="111.25" r="4"/><circle cx="340" cy="111.25" r="4"/>
+    </g>
+    <g font-size="10.5" font-weight="700" fill="#12333F" text-anchor="middle">
+      <text x="80" y="105">5,20</text><text x="170" y="105">5,20</text>
+      <text x="260" y="101">5,21</text><text x="340" y="101">5,21</text>
+    </g>
+    <g font-size="10" fill="#4E5A5F" text-anchor="middle">
+      <text x="80" y="208">3T26</text><text x="170" y="208">4T26</text>
+      <text x="260" y="208">1T27</text><text x="340" y="208">2T27</text>
+    </g>
+  </svg>
+  </div>
+  <p class="legenda">Legenda do gráfico.</p>
+</section>
+
+</main>
+
+<div style="height:2rem"></div>
+</div>
+</body>
+</html>

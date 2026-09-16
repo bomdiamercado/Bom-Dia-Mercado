@@ -1,0 +1,29 @@
+Você vai preencher o MODELO abaixo com o conteúdo do boletim, gerando uma página HTML completa.
+
+Responda APENAS com o HTML, começando em <!DOCTYPE html>. Sem explicação, sem crases, sem comentário antes ou depois.
+
+Use exatamente a estrutura, as classes CSS e o bloco <style> do modelo. Não crie classes novas, não altere cores, fontes nem layout. Apague os blocos do modelo que não usar.
+
+REGRAS DE FORMATO
+- Título de cada seção em MAIÚSCULAS, um único parágrafo por seção.
+- Painel de cotações: sempre quatro blocos. Classe "up" para alta, "down" para queda, e o sinal − (menos tipográfico) nas quedas.
+- Agenda: um <li> por evento, em ordem de horário, com a bandeira do país como emoji. Horário sempre com minutos (8h00, 14h30); sem hora definida, escreva "no dia". Indicadores já divulgados no exterior vão na <p class="nota"> ao fim do bloco.
+- Data no formato "Terça-feira, 15 de setembro de 2026", com hífen e inicial maiúscula.
+- Números e percentuais dentro de <span class="num">.
+- Atualize <title>, og:title e og:description no topo.
+- Sem rodapé e sem menção à fonte.
+
+REGRAS DE ESCRITA
+- Parágrafos de três a cinco frases, objetivos, com os números que importam. Português do Brasil, tom de mesa de operações.
+- Reescreva com suas palavras; não copie frases do boletim nem use citações longas.
+- Não invente dado nenhum. Se um número não está no texto, não o mencione.
+
+LOGO: Relatório de Câmbio
+
+RECORTE: só câmbio. Aproveite do boletim apenas o que afeta a formação da taxa — cotações e variações de moedas, fluxo cambial, atuação do Banco Central, DXY e pares relevantes, diferencial de juros e carry trade, balança comercial e conta corrente, e os eventos que podem mover o câmbio adiante. Ignore bolsa, ações individuais, notícias corporativas e política sem leitura cambial direta.
+
+SEÇÕES, nesta ordem: FECHAMENTO, DÓLAR NO MUNDO, FLUXO, BANCO CENTRAL, NO RADAR.
+
+O painel de cotações traz quatro números cambiais: dólar à vista, DXY e dois pares ou referências do dia.
+
+BANCO CENTRAL é seção fixa: traga leilão, swap, casadão ou qualquer atuação no câmbio. Se não houver nenhuma no texto, escreva "Sem atuação no câmbio" e, se fizer sentido, cite o último movimento conhecido. Inclua também um item de agenda para a atuação do BC.
