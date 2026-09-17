@@ -3,20 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bom Dia Mercado — 15 de setembro de 2026</title>
-<meta name="description" content="O STF julga hoje, ao vivo, na véspera da Superquarta. Quaest põe Flávio à frente pela primeira vez e o Treasury de 10 anos rompeu 5%.">
+
+<!-- ========== TROCAR A CADA EDIÇÃO ========== -->
+<title>Bom Dia Mercado — 17/09/2026</title>
+<meta name="description" content="Copom corta Selic para 13,75% com viés dovish; Fed sobe juros e endurece tom; petróleo recua mas segue acima de US$ 100.">
+<meta property="og:title" content="Bom Dia Mercado — 17/09/2026">
+<meta property="og:description" content="Copom corta Selic para 13,75% com viés dovish; Fed sobe juros e endurece tom; petróleo recua mas segue acima de US$ 100.">
+<!-- ========================================== -->
+
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Bom Dia Mercado">
-<meta property="og:title" content="Bom Dia Mercado — 15 de setembro de 2026">
-<meta property="og:description" content="Sessão do STF ao vivo às 10h, Treasury de 10 anos rompendo 5% e Quaest com Flávio numericamente à frente de Lula.">
-<meta property="og:url" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/preview.png">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="apple-touch-icon" href="icon.png">
-<link rel="icon" href="icon.png">
+<meta name="robots" content="noindex, nofollow">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
@@ -91,8 +91,7 @@
   .hora{font-size:.98rem;font-weight:700;color:var(--marine);}
   .ev{font-size:.94rem;}
   .ev small{display:block;color:var(--ink-soft);font-size:.82rem;line-height:1.4;margin-top:.1rem;}
-  .nota{margin:1rem 0 0;font-size:.88rem;color:var(--ink-soft);line-height:1.45;
-    text-align:justify;hyphens:auto;-webkit-hyphens:auto;}
+  .nota{margin:1rem 0 0;font-size:.88rem;color:var(--ink-soft);line-height:1.45;}
   .empresas{background:var(--panel);padding:1.4rem 1.35rem 1.5rem;margin-top:2rem;
     border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);}
   .empresas h2{margin-bottom:.9rem;}
@@ -110,11 +109,24 @@
     header h1{animation:rise .5s ease-out both;}
     @keyframes rise{from{opacity:0;transform:translateY(.5rem);}to{opacity:1;transform:none;}}
   }
+  table{width:100%;border-collapse:collapse;font-size:.86rem;margin:.2rem 0 0;}
+  caption{text-align:left;font-size:.8rem;color:var(--ink-soft);padding-bottom:.45rem;}
+  th,td{text-align:right;padding:.42rem .15rem;border-bottom:1px solid var(--rule);
+    font-variant-numeric:tabular-nums;}
+  th:first-child,td:first-child{text-align:left;}
+  thead th{font-size:.72rem;font-weight:700;color:var(--ink-soft);
+    text-transform:uppercase;letter-spacing:.03em;border-bottom:1.5px solid var(--marine);}
+  tbody tr:last-child td{border-bottom:none;}
+  td.alta{color:#1B6B4A;} td.baixa{color:#A32B22;}
+  .grafico{margin:.4rem 0 0;}
+  .grafico svg{width:100%;height:auto;display:block;}
+  .legenda{font-size:.78rem;color:var(--ink-soft);margin:.5rem 0 0;}
 </style>
 </head>
 <body>
 <div class="wrap">
 
+<!-- ================= CABEÇALHO ================= -->
 <header>
   <div class="masthead">
     <div class="logo">Bom Dia Mercado</div>
@@ -123,68 +135,78 @@
       <path d="M24 4.5v5M24 38.5v5M4.5 24h5M38.5 24h5M10.2 10.2l3.5 3.5M34.3 34.3l3.5 3.5M37.8 10.2l-3.5 3.5M13.7 34.3l-3.5 3.5"/>
     </svg>
   </div>
-  <p class="date">Terça-feira, 15 de setembro de 2026</p>
-  <h1>O Supremo rouba a cena na véspera da Superquarta</h1>
-  <p class="standfirst">A sessão que pode autorizar uma investigação contra Moraes vai ao ar às 10h, e o mercado vai acompanhar em tempo real. Fed, Copom, petróleo a três dígitos e o debate sobre a IA ficaram todos em segundo plano.</p>
+  <p class="date">Quinta-feira, 17 de setembro de 2026</p>
+  <h1>Mercado sai da Superquarta dividido sobre a Selic</h1>
+  <p class="standfirst">O Copom cortou a Selic para <span class="num">13,75%</span> com comunicado ligeiramente dovish, mas sem sinalizar os próximos passos. Do outro lado, o Fed subiu os juros e endureceu o tom, reduzindo o diferencial e complicando a equação para o carry trade.</p>
 </header>
 
+<!-- ================= PAINEL DE COTAÇÕES ================= -->
 <div class="strip">
   <dl class="quotes">
-    <div class="q"><dt>Brent</dt><dd>105,68</dd><span class="chg up">+1,02%</span></div>
-    <div class="q"><dt>Treasury 10 anos</dt><dd>4,987%</dd><span class="chg up">tocou 5,01%</span></div>
-    <div class="q"><dt>Ibovespa</dt><dd>185.501</dd><span class="chg down">−0,91%</span></div>
-    <div class="q"><dt>Dólar</dt><dd>5,1479</dd><span class="chg up">+0,44%</span></div>
+    <div class="q"><dt>Dólar à vista</dt><dd>5,1514</dd><span class="chg down">−0,07%</span></div>
+    <div class="q"><dt>Ibovespa</dt><dd>185.547</dd><span class="chg down">−0,51%</span></div>
+    <div class="q"><dt>Brent (nov.)</dt><dd>105,83</dd><span class="chg down">−2,69%</span></div>
+    <div class="q"><dt>Treasury 10a</dt><dd>5,015%</dd><span class="chg up">+0,14pp</span></div>
   </dl>
 </div>
 
+<!-- ================= AGENDA ================= -->
 <div class="hoje">
   <h2>AGENDA DE HOJE</h2>
   <ol class="agenda">
-    <li><span class="bandeira" role="img" aria-label="Alemanha">🇩🇪</span><span class="hora">6h00</span><span class="ev">Índice ZEW de setembro<small>Expectativas de investidores</small></span></li>
-    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">9h00</span><span class="ev">Vendas no varejo de julho<small>Mediana de −0,3% no restrito e +0,9% no ampliado</small></span></li>
-    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">9h00</span><span class="ev">Pesquisas Indexa/Broadcast e CNT/MDA<small>A primeira mediu também a confiança nas instituições</small></span></li>
-    <li><span class="bandeira" role="img" aria-label="Estados Unidos">🇺🇸</span><span class="hora">9h30</span><span class="ev">Empire State de setembro<small>Atividade industrial</small></span></li>
-    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">10h00</span><span class="ev">Sessão do STF, transmitida ao vivo<small>Decide se abre ou arquiva a investigação sobre Moraes e Vorcaro</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">5h00</span><span class="ev">IPC Fipe — 2ª quadrissemana de setembro<small>Fipe divulga prévia da inflação na cidade de São Paulo</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">8h00</span><span class="ev">IPC-S Capitais — 2ª quadrissemana de setembro<small>FGV informa prévia da inflação nas principais capitais</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Reino Unido">🇬🇧</span><span class="hora">8h00</span><span class="ev">Decisão do Banco da Inglaterra (BoE)<small>Expectativa de manutenção dos juros em 3,75%; possíveis três votos dissidentes pela alta de 25pbs</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">11h30</span><span class="ev">Leilão de títulos do Tesouro<small>BC oferta até US$ 2,5 bilhões em swaps cambiais para rolagem</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Estados Unidos">🇺🇸</span><span class="hora">9h30</span><span class="ev">Pedidos semanais de auxílio-desemprego<small>Previsão de 207,5 mil; no mesmo horário saem as construções de moradias iniciadas de agosto, com alta esperada de 7,3%</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">16h30</span><span class="ev">Presidente do BC, Gabriel Galípolo, recebe Armínio Fraga<small>Reunião na sede do Banco Central em Brasília</small></span></li>
+    <li><span class="bandeira" role="img" aria-label="Brasil">🇧🇷</span><span class="hora">no dia</span><span class="ev">Pesquisas eleitorais nacionais<small>AtlasIntel, Datafolha, Gerp e PoderData divulgam novas rodadas de intenção de voto para presidente</small></span></li>
   </ol>
-  <p class="nota">Na China, já divulgados: produção industrial de agosto acelerou a 5,2% na comparação anual, acima do esperado, enquanto o varejo subiu 0,4%, abaixo do consenso.</p>
+  <p class="nota">Já divulgados no exterior: CPI final de agosto da zona do euro confirmou <span class="num">3,3%</span> em 12 meses e núcleo de <span class="num">2,4%</span>.</p>
 </div>
 
 <main>
 
+<!-- ================= JUROS ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>JUROS</h2>
-  <p>A aposta em alta do Fed virou quase unanimidade: a probabilidade de 25 pontos-base subiu a <span class="num">90,3%</span>, ante 85,6% na sexta, e o Treasury de 10 anos cruzou os <span class="num">5%</span> durante a sessão pela primeira vez desde 2023, chegando a 5,012% antes de fechar em <span class="num">4,987%</span>; o de 2 anos foi a <span class="num">4,655%</span>. No Brasil o Copom vai na contramão, com corte praticamente fechado para <span class="num">13,75%</span> — e a novidade é que BofA e HSBC passaram a ver o ciclo continuar, cortando a projeção de fim de ano de 13,75% para <span class="num">13,25%</span>, ambos citando economia esfriando mais rápido que o esperado. Na curva doméstica, o Supremo falou mais alto: Jan/29 subiu a <span class="num">13,915%</span> e Jan/33 a <span class="num">14,275%</span>, com estabilidade só na ponta curta.</p>
+  <p>O Copom reduziu a Selic em <span class="num">25 pontos-base</span>, para <span class="num">13,75%</span>, com comunicado que trouxe três ajustes sutis em relação ao texto anterior: a moderação da atividade passou de "sugere" para "mostra", a inflação cheia e os núcleos agora estão "abaixo do limite superior da meta" e a palavra "adicional" foi retirada da menção à desancoragem das expectativas. A projeção do BC para o primeiro trimestre de 2028 permaneceu em <span class="num">3,2%</span>. O comunicado evitou qualquer compromisso com novembro, deixando todas as opções abertas e mantendo o mercado dividido entre pausa e novos cortes. A ata da próxima semana será o próximo teste para essa discussão. Do lado hawkish, o Fed elevou os juros em <span class="num">25 pontos-base</span>, para a faixa de <span class="num">3,75%</span> a <span class="num">4,00%</span> em decisão unânime, com a mediana do gráfico de pontos indicando juros em <span class="num">4,1%</span> no fim de 2026 e pelo menos mais uma alta neste ano na avaliação de 16 dos 18 dirigentes. A combinação de Copom dovish e Fed hawkish estreita o diferencial de juros, mas o mercado doméstico avalia que o carry ainda sustenta o fluxo.</p>
 </section>
 
+<!-- ================= DÓLAR ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>DÓLAR</h2>
-  <p>Bateu <span class="num">R$ 5,18</span> na máxima, mas devolveu parte da alta e fechou a <span class="num">R$ 5,1479</span>, subindo <span class="num">0,44%</span>, acompanhando o petróleo perder impulso à tarde. Lá fora a moeda americana se fortaleceu de forma generalizada, com o DXY em alta de <span class="num">0,27%</span>, a 99,391: o euro caiu a <span class="num">US$ 1,1545</span>, a libra a <span class="num">US$ 1,3497</span> e até o iene cedeu a <span class="num">154,40</span>, apesar do BoJ que decide na sexta. O ponto a observar é que o diferencial de juros começa a se estreitar pelas duas pontas a partir de amanhã — segundo Guilherme Casagrande, da Manchester Investimentos, ele ainda é alto e sustenta o real, mas volta a pesar quando a poeira política baixar.</p>
+  <p>Apesar da forte alta do dólar no exterior após o Fed — o índice DXY avançou <span class="num">0,64%</span>, para <span class="num">100,252</span> pontos —, o real ficou praticamente estável, com o dólar à vista fechando em leve baixa de <span class="num">0,07%</span>, cotado a <span class="num">R$ 5,1514</span>. O câmbio foi ancorado pelo trade eleitoral, com investidores apostando em eventual mudança fiscal caso a oposição vença, e pela resiliência do petróleo nos três dígitos, que favorece a balança comercial brasileira. A curva de DI ignorou em grande parte a pressão externa: o contrato de Janeiro de 2027 praticamente não se mexeu, em <span class="num">13,580%</span>, enquanto os vencimentos mais longos chegaram a cair — Jan/28 foi a <span class="num">13,625%</span>, Jan/29 a <span class="num">13,865%</span>, Jan/31 a <span class="num">14,070%</span> e Jan/33 a <span class="num">14,190%</span>. No exterior, euro recuou <span class="num">0,60%</span> para <span class="num">US$ 1,147</span>, libra perdeu <span class="num">0,65%</span> para <span class="num">US$ 1,3387</span> e iene caiu <span class="num">0,68%</span> para <span class="num">156,17</span> por dólar.</p>
 </section>
 
+<!-- ================= BOLSA ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>BOLSA</h2>
-  <p>O Ibovespa caiu <span class="num">0,91%</span>, aos <span class="num">185.500,88</span> pontos, com giro fraco de <span class="num">R$ 17,1 bilhões</span>. Nem a Petrobras aproveitou o petróleo, com ON em <span class="num">−0,48%</span> e PN em <span class="num">−0,16%</span>; o tombo ficou com a Vale, que perdeu <span class="num">3,48%</span>, mais que o dobro da queda do minério. Os bancos também foram mal, puxados por BB ON, em <span class="num">−1,65%</span>. Em Nova York, as ações de chips afundaram com o debate sobre frear a inteligência artificial — Marvell <span class="num">−7,32%</span>, Intel <span class="num">−5,59%</span>, Micron <span class="num">−5,25%</span> e Nvidia <span class="num">−3,36%</span> —, levando o Nasdaq a cair <span class="num">0,56%</span>, o S&amp;P 500 <span class="num">0,48%</span> e o Dow <span class="num">0,29%</span>.</p>
+  <p>O Ibovespa fechou em baixa de <span class="num">0,51%</span>, aos <span class="num">185.547,66</span> pontos, com giro de <span class="num">R$ 21,8 bilhões</span>, desempenho considerado contido diante do tom hawkish do Fed e da queda do petróleo. O representante do kit eleitoral BB ON subiu <span class="num">3,04%</span>, a <span class="num">R$ 22,71</span>, enquanto Bradesco PN avançou <span class="num">0,05%</span>, a <span class="num">R$ 18,21</span>, e Itaú PN recuou <span class="num">0,12%</span>, a <span class="num">R$ 42,62</span>. Petrobras ON afundou <span class="num">4,27%</span> para a mínima de <span class="num">R$ 53,83</span> e PN caiu <span class="num">3,53%</span> a <span class="num">R$ 48,65</span>, arrastadas pela queda do petróleo. Vale recuou <span class="num">2,14%</span> para <span class="num">R$ 73,00</span> com volume atípico de <span class="num">R$ 3,8 bilhões</span>, mais do que o triplo da média recente de <span class="num">R$ 1,5 bilhão</span>, com indícios de liquidação de posições por estrangeiros. Em Nova York, Dow Jones caiu <span class="num">1,21%</span> para <span class="num">51.461,90</span> pontos, S&P 500 recuou <span class="num">0,45%</span> para <span class="num">7.551,81</span> pontos e Nasdaq fechou estável em <span class="num">25.978,42</span> pontos, sustentado pela recuperação do setor de tecnologia.</p>
 </section>
 
+<!-- ================= ELEIÇÕES ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>ELEIÇÕES</h2>
-  <p>A Quaest trouxe o resultado mais forte da campanha até aqui: <strong>Flávio apareceu numericamente à frente de Lula pela primeira vez</strong> no segundo turno, por 42% a 40%, ainda em empate técnico; no primeiro turno, Lula manteve 36% e o senador subiu de 29% para 31%. O número que explica a atenção do mercado à sessão de hoje é outro: a parcela de eleitores que não confia no STF saltou de 46% para <span class="num">56%</span> em um mês, e chegou a 65% entre os independentes. No confronto entre os ministros, 37% acham que Mendonça age corretamente, contra 16% que dizem o mesmo de Moraes. Hoje saem Indexa/Broadcast e CNT/MDA, e o Datafolha começa nova rodada que perguntará diretamente o peso da crise na definição do voto.</p>
+  <p>A crise no STF entrou de vez na campanha eleitoral. Após o pedido de vista de Flávio Dino que suspendeu o julgamento de Alexandre de Moraes, a condução de Edson Fachin passou a ser criticada tanto por aliados de Moraes quanto por integrantes da ala de André Mendonça. Ministros avaliam que não faria sentido julgar a conduta de Mendonça antes de o Supremo decidir se os dois casos tramitam juntos, abrindo caminho para adiamento da sessão do dia 23. Com Dino tendo até 90 dias para devolver o processo, a definição tende a ficar para depois da eleição. Lula defendeu a apuração das suspeitas, mas pediu que Fachin não permita que o caso atrapalhe o processo eleitoral. Nesta quinta-feira, AtlasIntel, Datafolha, Gerp e PoderData divulgam novas rodadas de pesquisa de intenção de voto, enquanto a Ipsos-Ipec, ontem, mostrou piora na avaliação do governo: a parcela que considera a administração ruim ou péssima subiu de <span class="num">38%</span> para <span class="num">43%</span> desde junho e a desaprovação ao modo de governar avançou de <span class="num">50%</span> para <span class="num">53%</span>.</p>
 </section>
 
+<!-- ================= PETRÓLEO ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>PETRÓLEO</h2>
-  <p>O Brent subiu <span class="num">1,02%</span>, a <span class="num">US$ 105,68</span>, depois de tocar US$ 109,80, com o mercado medindo o estrago da paralisação do oleoduto Leste-Oeste saudita: a instalação transporta até 7 milhões de barris por dia e deve ficar em boa parte fora de operação por três a cinco semanas. Os houthis ameaçaram diretamente a Arábia Saudita, dizendo que o país não estará a salvo enquanto atacar o Iêmen. Relatos de que os Estados Unidos avaliariam um acordo em etapas com o Irã afastaram os preços das máximas à tarde, mas Teerã negou à noite estar negociando. O Berenberg projeta petróleo em torno ou acima de <span class="num">US$ 100</span> até o fim de 2026.</p>
+  <p>Depois do salto da véspera, o petróleo recuou com a informação de que autoridades americanas se reuniram com os houthis em Omã e os rebeldes afirmaram não pretender atacar navios dos Estados Unidos. Os estoques do DoE também pesaram, com queda do petróleo abaixo do esperado e alta de gasolina e destilados. O Brent para novembro fechou a <span class="num">US$ 105,83</span>, queda de <span class="num">2,69%</span>, e o WTI para outubro caiu <span class="num">3,21%</span>, a <span class="num">US$ 102,43</span>. O Centcom reforçou o alívio ao afirmar que o tráfego pelo estreito de Ormuz segue fluindo, com mais de <span class="num">900 milhões de barris</span> passando pelo estreito desde maio com apoio americano. A trégua ainda é frágil: os houthis afirmaram ter atacado uma base aérea e instalações da Saudi Aramco, enquanto a Arábia Saudita tenta recuperar parte da capacidade do oleoduto danificado na semana passada. Trump deve se reunir na próxima terça com líderes do Golfo, à margem da Assembleia Geral da ONU, para discutir os próximos passos do conflito.</p>
 </section>
 
+<!-- ================= PETROBRAS ================= -->
 <section class="pad">
   <div class="h-rule"></div>
   <h2>PETROBRAS</h2>
-  <p>Assinou contrato de 20 anos com a Sempra para comprar <span class="num">0,8 milhão de toneladas</span> anuais de GNL, com fornecimento a partir de um terminal no Texas. A companhia também paga hoje <span class="num">R$ 81,3 milhões</span> em juros da primeira e da segunda séries da sétima emissão de debêntures.</p>
+  <p>A presidente da Petrobras, Magda Chambriard, afirmou que a companhia irá assinar nesta semana contrato para exploração de oito blocos em águas ultraprofundas na Costa do Marfim. O Tribunal de Contas da União informou que julgará a política de preços da Petrobras em sessão reservada marcada para a próxima quarta-feira, dia 23. A companhia informou ainda que manterá inalterado o preço efetivo do diesel às distribuidoras, com o aumento de <span class="num">R$ 1 por litro</span> compensado por igual desconto da subvenção federal.</p>
 </section>
 
 </main>
