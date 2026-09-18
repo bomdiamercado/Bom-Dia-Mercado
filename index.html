@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- TÍTULO: "Bom Dia Mercado — DD/MM/AAAA" -->
+  <title>Bom Dia Mercado — 18/09/2026</title>
+  <!-- DESCRIPTION: manchete resumida em uma linha -->
+  <meta name="description" content="BoJ eleva juros ao maior nível em 31 anos; Selic pode cair mais; eleição esquenta com reajuste do Bolsa Família e Datafolha empatado">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bom Dia Mercado — 18/09/2026">
+  <meta property="og:description" content="BoJ eleva juros ao maior nível em 31 anos; Selic pode cair mais; eleição esquenta com reajuste do Bolsa Família e Datafolha empatado">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bom Dia Mercado">
+  <meta property="og:image" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --marine:      #12333F;
+      --marine-deep: #0D262F;
+      --paper:       #E9E6DE;
+      --amber:       #C98A1E;
+      --ink:         #1A1A1A;
+      --muted:       #5A5A5A;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Carlito', Calibri, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    header {
+      background: var(--marine);
+      color: #fff;
+      padding: 18px 24px 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-sol { flex-shrink: 0; }
+    .logo-texto h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .logo-texto .data {
+      font-size: 0.82rem;
+      opacity: 0.75;
+      margin-top: 2px;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── MANCHETE ── */
+    .manchete {
+      background: var(--marine-deep);
+      color: #fff;
+      padding: 20px 24px 18px;
+    }
+    .manchete h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+    }
+    .manchete p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.88;
+      text-align: justify;
+      hyphens: auto;
+    }
+
+    /* ── PAINEL COTAÇÕES ── */
+    .painel {
+      background: var(--marine);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .cotacao {
+      padding: 12px 14px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      color: #fff;
+    }
+    .cotacao:last-child { border-right: none; }
+    .cotacao .label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.6;
+      margin-bottom: 3px;
+    }
+    .cotacao .valor {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .cotacao .var {
+      font-size: 0.72rem;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    .var.pos { color: #6fcf97; }
+    .var.neg { color: #eb5757; }
+    .var.neu { color: rgba(255,255,255,0.5); }
+
+    /* ── CORPO ── */
+    .corpo {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+
+    /* ── AGENDA ── */
+    .agenda {
+      margin: 24px 0 8px;
+      border: 1px solid rgba(18,51,63,0.18);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .agenda-titulo {
+      background: var(--marine);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+    }
+    .agenda-lista { list-style: none; }
+    .agenda-lista li {
+      display: grid;
+      grid-template-columns: 28px 52px 1fr;
+      gap: 8px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(18,51,63,0.08);
+      align-items: start;
+      line-height: 1.4;
+    }
+    .agenda-lista li:last-child { border-bottom: none; }
+    .agenda-lista li:nth-child(even) { background: rgba(18,51,63,0.03); }
+    .agenda-lista .bandeira {
+      width: 22px;
+      height: 15px;
+      display: block;
+      margin-top: 3px;
+      border: 1px solid rgba(18,51,63,0.25);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .agenda-lista .bandeira svg { display: block; width: 100%; height: 100%; }
+    .agenda-lista .hora {
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding-top: 1px;
+    }
+    .agenda-lista .desc strong {
+      display: block;
+      font-weight: 700;
+      color: var(--marine);
+    }
+    .agenda-lista .desc span {
+      color: var(--muted);
+      font-size: 0.80rem;
+    }
+
+    /* ── SEÇÕES ── */
+    .secao { margin-top: 24px; }
+    .secao h3 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--marine);
+      border-bottom: 2px solid var(--amber);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+    .secao p {
+      font-size: 0.915rem;
+      line-height: 1.65;
+      text-align: justify;
+      hyphens: auto;
+      color: var(--ink);
+    }
+
+    /* ── NÚMEROS ── */
+    .num { font-weight: 700; color: var(--marine); }
+
+    /* ── TABELA (opcional) ── */
+    .tabela {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      margin-top: 12px;
+    }
+    .tabela th {
+      background: var(--marine);
+      color: #fff;
+      text-align: left;
+      padding: 7px 10px;
+      font-size: 0.72rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .tabela td {
+      padding: 6px 10px;
+      border-bottom: 1px solid rgba(18,51,63,0.10);
+    }
+    .tabela tr:last-child td { border-bottom: none; }
+    .tabela tr:nth-child(even) td { background: rgba(18,51,63,0.03); }
+
+    /* ── GRÁFICO SVG (opcional) ──
+       Fórmula de posição vertical:
+       y = 190 - (valor - BASE) / ESCALA * 150
+       Exemplo base=5,00; escala=0,40
+    ── */
+    .grafico-wrap {
+      margin-top: 16px;
+      background: #fff;
+      border: 1px solid rgba(18,51,63,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .grafico-wrap svg { display: block; width: 100%; height: auto; }
+
+    /* ── RODAPÉ ── */
+    footer {
+      background: var(--marine-deep);
+      color: rgba(255,255,255,0.45);
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 14px 20px;
+      margin-top: 32px;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════
+     HEADER — substituir DATA_LONGA pela data por extenso
+     Exemplo: "Quinta-feira, 17 de setembro de 2026"
+     ═══════════════════════════════════════════ -->
+<header>
+  <!-- Sol SVG — manter sempre no Bom Dia Mercado; remover no Relatório de Câmbio -->
+  <svg class="logo-sol" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="24" cy="24" r="10" fill="#E8B04B"/>
+    <g stroke="#E8B04B" stroke-width="2.2" stroke-linecap="round">
+      <line x1="24" y1="4"  x2="24" y2="10"/>
+      <line x1="24" y1="38" x2="24" y2="44"/>
+      <line x1="4"  y1="24" x2="10" y2="24"/>
+      <line x1="38" y1="24" x2="44" y2="24"/>
+      <line x1="9.4"  y1="9.4"  x2="13.7" y2="13.7"/>
+      <line x1="34.3" y1="34.3" x2="38.6" y2="38.6"/>
+      <line x1="38.6" y1="9.4"  x2="34.3" y2="13.7"/>
+      <line x1="13.7" y1="34.3" x2="9.4"  y2="38.6"/>
+    </g>
+  </svg>
+  <div class="logo-texto">
+    <h1>Bom Dia Mercado</h1>
+    <div class="data">Sexta-feira, 18 de setembro de 2026</div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════════════════
+     MANCHETE — título curto + parágrafo de abertura
+     ═══════════════════════════════════════════ -->
+<div class="manchete">
+  <h2>BOJ FECHA SUPERSEMANA E ELEIÇÃO ESQUENTA</h2>
+  <p>A semana dos bancos centrais termina com o Banco do Japão elevando os juros ao maior nível em 31 anos, enquanto os mercados ainda digerem as decisões do Fed e do Copom e recalibram as apostas para a Selic. O petróleo deu algum alívio ao cair pelo segundo pregão, mas o Brent segue acima de US$ 100 e a tensão em Ormuz mantém vivo o principal risco para a inflação global. No Brasil, Lula partiu para uma ofensiva eleitoral em várias frentes, do reajuste do Bolsa Família às canetas emagrecedoras e à crise do STF, antes de levar a campanha à ONU na próxima terça-feira. O Datafolha, porém, mostra que a disputa com Flávio Bolsonaro continua tecnicamente empatada.</p>
+</div>
+
+<!-- ═══════════════════════════════════════════
+     PAINEL DE COTAÇÕES — 4 blocos
+     var: usar classe "pos" (verde), "neg" (vermelho) ou "neu" (neutro)
+     ═══════════════════════════════════════════ -->
+<div class="painel">
+  <div class="cotacao">
+    <div class="label">Dólar</div>
+    <div class="valor"><span class="num">5,1393</span></div>
+    <div class="var pos">-0,23%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Ibovespa</div>
+    <div class="valor"><span class="num">185.992,03</span></div>
+    <div class="var pos">+0,24%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Brent</div>
+    <div class="valor"><span class="num">104,82</span></div>
+    <div class="var neg">-0,95%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">T-Note 10a</div>
+    <div class="valor"><span class="num">4,929</span></div>
+    <div class="var neu">—</div>
+  </div>
+</div>
+
+<div class="corpo">
+
+  <!-- ═══════════════════════════════════════════
+       AGENDA — um <li> por evento
+       Colunas: bandeira SVG | hora (ex: "8h00") | descrição
+       O gerar.py preenche a bandeira pelo código do país (BR, US, EU...)
+       Se sem hora, usar "no dia" na coluna de hora
+       ═══════════════════════════════════════════ -->
+  <div class="agenda">
+    <div class="agenda-titulo">Agenda de hoje</div>
+    <ul class="agenda-lista">
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><circle cx="14" cy="10" r="5.5" fill="#BC002D"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Decisão do BoJ</strong>
+          <span>Banco do Japão elevou taxa em 25pbs, de 1% para 1,25%</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">8h00</span>
+        <span class="desc">
+          <strong>FGV divulga segunda prévia do IGP-M de setembro</strong>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">10h30</span>
+        <span class="desc">
+          <strong>BC realiza dois leilões simultâneos de linha</strong>
+          <span>Venda de dólares com compromisso de recompra, de no máximo US$ 1,0 bilhão</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">10h15</span>
+        <span class="desc">
+          <strong>Produção industrial de agosto</strong>
+          <span>Previsão de alta de 0,3%, após avanço de 0,2% em julho</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">10h30</span>
+        <span class="desc">
+          <strong>Fala da dirigente do Fed Michelle Bowman</strong>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">12h45</span>
+        <span class="desc">
+          <strong>Fala do dirigente do Fed Jeff Schmid</strong>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">18h00</span>
+        <span class="desc">
+          <strong>Ministro Dario Durigan participa do Fórum CEO Brasil</strong>
+          <span>Evento na Bahia</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="6.7" fill="#000"/><rect width="28" height="6.7" y="6.7" fill="#DD0000"/><rect width="28" height="6.6" y="13.4" fill="#FFCE00"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Alemanha divulga PPI de agosto</strong>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#012169"/><path d="M0 0 28 20M28 0 0 20" stroke="#fff" stroke-width="4"/><path d="M0 0 28 20M28 0 0 20" stroke="#C8102E" stroke-width="2"/><path d="M14 0v20M0 10h28" stroke="#fff" stroke-width="6"/><path d="M14 0v20M0 10h28" stroke="#C8102E" stroke-width="3.5"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Reino Unido divulga vendas no varejo de agosto</strong>
+        </span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SEÇÕES — ordem fixa:
+       JUROS | DÓLAR | BOLSA | ELEIÇÕES | PETRÓLEO | PETROBRAS
+       Petrobras: "Nenhuma notícia relevante." se não houver
+       Números sempre dentro de <span class="num">
+       ═══════════════════════════════════════════ -->
+
+  <div class="secao">
+    <h3>Juros</h3>
+    <p>Passada a Superquarta, o mercado refez as contas para a Selic e a maioria agora espera mais um corte de 25pbs em novembro, para 13,50%. No Broadcast, 20 de 36 instituições apostam em nova redução, enquanto 15 esperam manutenção em 13,75%. A mediana para novembro e dezembro caiu de 13,75% para 13,50%, refletindo a percepção de que o Copom ganhou confiança na desaceleração da atividade e deixou a porta aberta para continuar o ciclo. A divisão, porém, permanece grande: o PicPay vê apenas mais um corte, para 13,50%; a Porto Asset projeta duas reduções e Selic de 13,25% em dezembro; e o Itaú espera pausa em 13,75% até o fim do ano. Para 2027, a mediana da Selic subiu de 12% para 12,38%, e o Barclays estima que estabilizar a dívida exigiria superávits primários de pelo menos 2% do PIB nos próximos anos, com ajuste necessário de mais de 2,5 pontos do PIB, ou cerca de R$ 350 bilhões.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Dólar</h3>
+    <p>Imune às pressões, o dólar fechou abaixo de R$ 5,15, em leve baixa de 0,23%, a R$ 5,1393, após ter subido mais cedo até R$ 5,1768, na máxima intraday que coincidiu com o anúncio do reajuste do Bolsa Família. O economista-chefe da XP Investimentos, Caio Megale, descreveu o câmbio como uma rocha: piora um pouco e vai para R$ 5,20; melhora e cai um pouco abaixo de R$ 5,10. O BC anunciou dois leilões de linha para esta sexta-feira, às 10h30, de no máximo US$ 1,0 bilhão, em resposta a uma piora no dólar casado e à saída de capital típica do fim de trimestre, que pode ter aumentado por conta da cautela pré-eleições. Só neste mês, a autoridade monetária já realizou duas vezes o chamado casadão, no total de US$ 1 bilhão cada.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Bolsa</h3>
+    <p>O Ibovespa relativizou ao longo do pregão o desconforto com o reajuste do Bolsa Família e fechou em alta de 0,24%, aos 185.992,03 pontos, com giro de R$ 18,6 bilhões. Num primeiro momento, o índice chegou a cair mais de 1%, mas o humor virou na segunda metade do pregão, impulsionado pelo quadro externo favorável, com alívio do petróleo, recuo dos juros dos Treasuries e retomada das techs. Os papéis dos bancos chegaram a acusar cautela, mas reduziram o mal-estar: Bradesco PN caiu 0,33%, a R$ 18,15; Itaú fechou estável em -0,09%, a R$ 42,58; BB registrou alta de 0,31%, a R$ 22,78; Santander unit escalou 2,52%, a R$ 30,53; e BTG unit avançou 0,51%, a R$ 61,14. Vale subiu 2,07%, a R$ 74,51, após duas sessões de fortes baixas.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Eleições</h3>
+    <p>A 17 dias do primeiro turno, Lula anunciou reajuste de 15% no Bolsa Família, elevando o piso do benefício de R$ 600 para R$ 691 e o valor médio para R$ 777, com impacto estimado de R$ 5,8 bilhões neste ano e R$ 22,7 bilhões em 2027 e 2028. O episódio gerou controvérsia jurídica e fiscal, com a IFI contestando as contas do governo e partidos avaliando recorrer à Justiça Eleitoral. O novo Datafolha, divulgado após o fechamento do mercado, manteve Lula e Flávio Bolsonaro tecnicamente empatados: no segundo turno, Lula tem 46% e Flávio, 44%, com rejeição idêntica de 47% para ambos. O levantamento foi o primeiro realizado após a sessão do STF desta semana, e antes do anúncio do reajuste do Bolsa Família. Lula também se envolveu na crise do STF, acusando André Mendonça de usar o cargo para fazer política, e deve abrir a Assembleia Geral da ONU em Nova York na próxima terça-feira, 22.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petróleo</h3>
+    <p>O petróleo caiu pelo segundo pregão seguido, com sinais de avanço diplomático no Oriente Médio reduzindo parte da pressão sobre a oferta. O Brent para novembro recuou 0,95%, a US$ 104,82, e o WTI perdeu 0,51%, a US$ 101,91. A China pediu reservadamente ao Irã que use sua influência para conter os houthis, após apelo da Arábia Saudita a Pequim, e o aumento do fluxo de petróleo saudita via Omã também ajudou. Ainda assim, o mercado físico permanece apertado, o tráfego de petroleiros pelo Estreito de Ormuz continua caindo, e a UKMTO relatou um novo incidente de segurança na região após o fechamento. Trump disse estar perto de decidir se retoma ataques em grande escala contra o Irã, e mesmo após as últimas quedas o Brent acumula alta de quase 14% no mês e de mais de 70% no ano.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petrobras</h3>
+    <p>Petrobras oscilou pouco no pregão de quinta-feira, apesar da queda do petróleo: as ações ON subiram 0,32%, a R$ 54,00, e as PN recuaram 0,08%, a R$ 48,61. A Brava Energia confirmou o fim da venda de 11 concessões na Bacia Potiguar à Azevedo & Travassos e Petro-Victory, após as condições para o fechamento não terem sido cumpridas no prazo.</p>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       TABELA (opcional — remover se não usar)
+       ═══════════════════════════════════════════ -->
+  <!--
+  <div class="secao">
+    <h3>Título da tabela</h3>
+    <table class="tabela">
+      <thead>
+        <tr><th>Coluna 1</th><th>Coluna 2</th><th>Coluna 3</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>dado</td><td>dado</td><td>dado</td></tr>
+      </tbody>
+    </table>
+  </div>
+  -->
+
+  <!-- ═══════════════════════════════════════════
+       GRÁFICO SVG de linha (opcional — remover se não usar)
+       Fórmula y: y = 190 - (valor - 5.00) / 0.40 * 150
+       Ajustar BASE e ESCALA conforme o range dos dados
+       ═══════════════════════════════════════════ -->
+  <!--
+  <div class="secao">
+    <h3>Título do gráfico</h3>
+    <div class="grafico-wrap">
+      <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
+        <polyline
+          fill="none"
+          stroke="#12333F"
+          stroke-width="2"
+          points="
+            50,190
+            150,150
+            250,120
+            350,100
+            450,80
+            550,60
+          "
+        />
+      </svg>
+    </div>
+  </div>
+  -->
+
+</div>
+
+<footer>
+  Bom Dia Mercado · 18/09/2026
+</footer>
+
+</body>
+</html>
