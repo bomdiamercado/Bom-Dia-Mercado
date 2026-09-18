@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bom Dia Mercado — 16/09/2026</title>
+  <meta name="description" content="Superquarta com Fed subindo e Copom cortando, petróleo perto de US$ 110 e crise no STF pressionando juros longos.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Bom Dia Mercado — 16/09/2026">
+  <meta property="og:description" content="Superquarta com Fed subindo e Copom cortando, petróleo perto de US$ 110 e crise no STF pressionando juros longos.">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Bom Dia Mercado">
+  <meta property="og:image" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" type="image/png" href="icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --marine:      #12333F;
+      --marine-deep: #0D262F;
+      --paper:       #E9E6DE;
+      --amber:       #C98A1E;
+      --ink:         #1A1A1A;
+      --muted:       #5A5A5A;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Carlito', Calibri, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    header {
+      background: var(--marine);
+      color: #fff;
+      padding: 18px 24px 14px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .logo-sol { flex-shrink: 0; }
+    .logo-texto h1 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+      text-transform: uppercase;
+    }
+    .logo-texto .data {
+      font-size: 0.82rem;
+      opacity: 0.75;
+      margin-top: 2px;
+      letter-spacing: 0.03em;
+    }
+    .manchete {
+      background: var(--marine-deep);
+      color: #fff;
+      padding: 20px 24px 18px;
+    }
+    .manchete h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      line-height: 1.3;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .manchete p {
+      font-size: 0.92rem;
+      line-height: 1.55;
+      opacity: 0.88;
+      text-align: justify;
+      hyphens: auto;
+    }
+    .painel {
+      background: var(--marine);
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .cotacao {
+      padding: 12px 14px;
+      border-right: 1px solid rgba(255,255,255,0.08);
+      color: #fff;
+    }
+    .cotacao:last-child { border-right: none; }
+    .cotacao .label {
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      opacity: 0.6;
+      margin-bottom: 3px;
+    }
+    .cotacao .valor {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.1;
+    }
+    .cotacao .var {
+      font-size: 0.72rem;
+      margin-top: 2px;
+      opacity: 0.8;
+    }
+    .var.pos { color: #6fcf97; }
+    .var.neg { color: #eb5757; }
+    .var.neu { color: rgba(255,255,255,0.5); }
+    .corpo {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px 40px;
+    }
+    .agenda {
+      margin: 24px 0 8px;
+      border: 1px solid rgba(18,51,63,0.18);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .agenda-titulo {
+      background: var(--marine);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 8px 14px;
+    }
+    .agenda-lista { list-style: none; }
+    .agenda-lista li {
+      display: grid;
+      grid-template-columns: 28px 52px 1fr;
+      gap: 8px;
+      padding: 7px 14px;
+      font-size: 0.85rem;
+      border-bottom: 1px solid rgba(18,51,63,0.08);
+      align-items: start;
+      line-height: 1.4;
+    }
+    .agenda-lista li:last-child { border-bottom: none; }
+    .agenda-lista li:nth-child(even) { background: rgba(18,51,63,0.03); }
+    .agenda-lista .hora {
+      color: var(--muted);
+      font-size: 0.78rem;
+      padding-top: 1px;
+    }
+    .agenda-lista .desc strong {
+      display: block;
+      font-weight: 700;
+      color: var(--marine);
+    }
+    .agenda-lista .desc span {
+      color: var(--muted);
+      font-size: 0.80rem;
+    }
+    .secao { margin-top: 24px; }
+    .secao h3 {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--marine);
+      border-bottom: 2px solid var(--amber);
+      padding-bottom: 4px;
+      margin-bottom: 10px;
+    }
+    .secao p {
+      font-size: 0.915rem;
+      line-height: 1.65;
+      text-align: justify;
+      hyphens: auto;
+      color: var(--ink);
+    }
+    .num { font-weight: 700; color: var(--marine); }
+    footer {
+      background: var(--marine-deep);
+      color: rgba(255,255,255,0.45);
+      font-size: 0.72rem;
+      text-align: center;
+      padding: 14px 20px;
+      margin-top: 32px;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <svg class="logo-sol" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <circle cx="24" cy="24" r="10" fill="#E8B04B"/>
+    <g stroke="#E8B04B" stroke-width="2.2" stroke-linecap="round">
+      <line x1="24" y1="4"  x2="24" y2="10"/>
+      <line x1="24" y1="38" x2="24" y2="44"/>
+      <line x1="4"  y1="24" x2="10" y2="24"/>
+      <line x1="38" y1="24" x2="44" y2="24"/>
+      <line x1="9.4"  y1="9.4"  x2="13.7" y2="13.7"/>
+      <line x1="34.3" y1="34.3" x2="38.6" y2="38.6"/>
+      <line x1="38.6" y1="9.4"  x2="34.3" y2="13.7"/>
+      <line x1="13.7" y1="34.3" x2="9.4"  y2="38.6"/>
+    </g>
+  </svg>
+  <div class="logo-texto">
+    <h1>Bom Dia Mercado</h1>
+    <div class="data">Quarta-feira, 16 de setembro de 2026</div>
+  </div>
+</header>
+
+<div class="manchete">
+  <h2>Fed e Copom em direções contrárias</h2>
+  <p>A Superquarta chega com o Fed prestes a subir juros e o Copom pronto para cortar, ambos pressionados pelo petróleo perto de US&nbsp;$&nbsp;110. O foco estará na comunicação de Kevin Warsh e do BC sobre os próximos passos, enquanto a crise no STF adiciona prêmio à curva doméstica.</p>
+</div>
+
+<div class="painel">
+  <div class="cotacao">
+    <div class="label">Dólar</div>
+    <div class="valor"><span class="num">5,1543</span></div>
+    <div class="var pos">+0,14%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Ibovespa</div>
+    <div class="valor"><span class="num">186.502</span></div>
+    <div class="var pos">+0,54%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">Brent</div>
+    <div class="valor"><span class="num">108,75</span></div>
+    <div class="var pos">+2,90%</div>
+  </div>
+  <div class="cotacao">
+    <div class="label">T-Note 10a</div>
+    <div class="valor"><span class="num">5,001%</span></div>
+    <div class="var neu">—</div>
+  </div>
+</div>
+
+<div class="corpo">
+
+  <div class="agenda">
+    <div class="agenda-titulo">Agenda de hoje</div>
+    <ul class="agenda-lista">
+      <li><span>🇬🇧</span><span class="hora">3h00</span><span class="desc"><strong>CPI de agosto — Reino Unido</strong><span>Já divulgado: taxa anual acelerou para 3,1%, em linha com o esperado</span></span></li>
+      <li><span>🇧🇷</span><span class="hora">8h00</span><span class="desc"><strong>IGP-10 de setembro — FGV</strong><span>Mediana aponta alta de 1,15%, após deflação de 0,51% em agosto</span></span></li>
+      <li><span>🇪🇺</span><span class="hora">6h00</span><span class="desc"><strong>Produção industrial de julho — Zona do Euro</strong><span>Previsão de alta de 0,1%, após estabilidade em junho</span></span></li>
+      <li><span>🇧🇷</span><span class="hora">9h00</span><span class="desc"><strong>IBC-Br de julho — Banco Central</strong><span>Mediana aponta queda de 0,10% na margem e alta de 1,10% no ano</span></span></li>
+      <li><span>🇺🇸</span><span class="hora">9h30</span><span class="desc"><strong>Vendas no varejo de agosto</strong><span>Previsão de +0,7%, após queda de 0,6% em julho</span></span></li>
+      <li><span>🇧🇷</span><span class="hora">10h00</span><span class="desc"><strong>BDM Live — Decisão da Selic</strong><span>Economista-chefe do Banco Inter, Rafaela Vitória, com Rosa Riscala e Téo Takar; canal do BDM no YouTube</span></span></li>
+      <li><span>🇺🇸</span><span class="hora">11h30</span><span class="desc"><strong>Estoques semanais de petróleo, gasolina e destilados — DoE</strong></span></li>
+      <li><span>🇪🇺</span><span class="hora">14h00</span><span class="desc"><strong>Christine Lagarde (BCE) em evento em Frankfurt</strong></span></li>
+      <li><span>🇺🇸</span><span class="hora">15h00</span><span class="desc"><strong>Decisão de juros do Fed (Fomc)</strong><span>Mercado precifica <span class="num">95%</span> de probabilidade de alta de <span class="num">25</span> pontos-base</span></span></li>
+      <li><span>🇺🇸</span><span class="hora">15h30</span><span class="desc"><strong>Coletiva de imprensa de Kevin Warsh — Fed</strong></span></li>
+      <li><span>🇧🇷</span><span class="hora">18h30</span><span class="desc"><strong>Decisão de juros do Copom — Banco Central</strong><span>Mercado precifica <span class="num">96%</span> de probabilidade de corte de <span class="num">25</span> pontos-base, para <span class="num">13,75%</span></span></span></li>
+    </ul>
+  </div>
+
+  <div class="secao">
+    <h3>Juros</h3>
+    <p>A curva de DI fechou pressionada na terça-feira pela combinação de crise no STF e alta dos Treasuries, com o miolo e a ponta longa liderando os acréscimos. O contrato para Jan/28 fechou em <span class="num">13,670%</span>, Jan/29 em <span class="num">13,940%</span>, Jan/31 em <span class="num">14,230%</span> e Jan/33 em <span class="num">14,370%</span>. Apenas os vencimentos curtos resistiram perto da estabilidade: o DI para Jan/27 encerrou em <span class="num">13,580%</span>, ancorado pela certeza do corte do Copom hoje e pelas vendas no varejo de julho do IBGE, que vieram no piso do intervalo de estimativas em <span class="num">−0,8%</span>. Para novembro, os mercados já dividem as apostas quase ao meio, com <span class="num">52%</span> de probabilidade de novo corte e <span class="num">48%</span> de manutenção; para dezembro, a chance de pausa sobe a <span class="num">84%</span>.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Dólar</h3>
+    <p>O real mostrou resiliência diante da tempestade externa: o dólar avançou apenas <span class="num">0,14%</span>, fechando a <span class="num">R$&nbsp;5,1543</span>, porque o petróleo caro compensa parte da pressão sobre a moeda brasileira. O dólar ganhou força globalmente na véspera do Fed, levando o euro a cair <span class="num">0,12%</span>, para <span class="num">US$&nbsp;1,1545</span>, e a libra esterlina a recuar <span class="num">0,21%</span>, a <span class="num">US$&nbsp;1,3479</span>. O iene perdeu <span class="num">0,52%</span>, a <span class="num">155,11</span> por dólar, mesmo com a expectativa de alta do Bank of Japan. O BC avalia que, até agora, o câmbio não contaminou as expectativas de inflação de forma relevante, o que abre espaço para o corte da Selic hoje.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Bolsa</h3>
+    <p>O Ibovespa fechou em alta de <span class="num">0,54%</span>, aos <span class="num">186.502,64</span> pontos, mas o giro reduzido de <span class="num">R$&nbsp;15,8&nbsp;bilhões</span> revela que o investidor ficou na defensiva. Petrobras ON liderou as altas com <span class="num">+3,63%</span>, a <span class="num">R$&nbsp;56,23</span>, enquanto Vale caiu <span class="num">1,17%</span>, à mínima intraday de <span class="num">R$&nbsp;74,60</span>, pior desempenho do que o próprio minério de ferro, que recuou <span class="num">0,56%</span>. Os principais bancos fecharam no vermelho, com exceção do Itaú, que subiu <span class="num">0,76%</span> a <span class="num">R$&nbsp;42,67</span>. Em Nova York, o Nasdaq caiu <span class="num">0,78%</span> a <span class="num">25.981,57</span> pontos, o Dow Jones perdeu <span class="num">0,63%</span> a <span class="num">52.092,11</span> pontos e o S&amp;P&nbsp;500 recuou <span class="num">0,45%</span> a <span class="num">7.585,73</span> pontos, pressionados pelo petróleo, pela alta de juro contratada para o Fed e pelo risco em inteligência artificial.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Eleições</h3>
+    <p>O pedido de vista de Flávio Dino suspendeu a decisão do STF sobre a abertura de investigação contra o ministro Alexandre de Moraes, com prazo de até <span class="num">90</span> dias para devolução — o que pode empurrar o desfecho para depois das eleições, em até <span class="num">13</span> de dezembro. Antes da suspensão, o plenário havia formado placar de <span class="num">4</span> a <span class="num">3</span> contra a proposta de Gilmar Mendes de reunir o caso de Moraes ao processo sobre André Mendonça. Para os gestores ouvidos pelo mercado, o principal efeito da crise do Supremo sobre os ativos segue sendo eleitoral: quanto mais tempo o STF permanecer no noticiário, maior o espaço para a oposição explorar o desgaste. A Indexa/Broadcast apontou empate técnico, com Lula em <span class="num">43%</span> e Flávio em <span class="num">42%</span>, enquanto a CNT/MDA mostrou Lula à frente por <span class="num">47,3%</span> a <span class="num">40%</span> no segundo turno, acima da margem de erro.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petróleo</h3>
+    <p>O Brent fechou em <span class="num">US$&nbsp;108,75</span>, alta de <span class="num">2,9%</span>, e o WTI avançou <span class="num">4,38%</span>, a <span class="num">US$&nbsp;105,83</span>, com a guerra ampliando as ameaças à oferta global. Além das restrições pelo Estreito de Ormuz — onde o Irã afirmou ter derrubado o terceiro drone americano —, a Arábia Saudita suspendeu carregamentos no porto de Yanbu e fechou o oleoduto Leste-Oeste após ataques, avisando clientes europeus que cargas previstas para o fim de setembro serão canceladas. O governo americano disse esperar que o oleoduto volte a operar "muito em breve", e o vice-presidente JD Vance afirmou que o tráfego por Ormuz já voltou para mais de <span class="num">50%</span> do normal. O CBO calculou que a guerra custou <span class="num">US$&nbsp;38&nbsp;bilhões</span> aos Estados Unidos nos primeiros cinco meses e deve acrescentar <span class="num">US$&nbsp;3&nbsp;bilhões</span> por mês às despesas.</p>
+  </div>
+
+  <div class="secao">
+    <h3>Petrobras</h3>
+    <p>Nenhuma notícia relevante.</p>
+  </div>
+
+</div>
+
+<footer>
+  Bom Dia Mercado · 16 de setembro de 2026
+</footer>
+
+</body>
+</html>
