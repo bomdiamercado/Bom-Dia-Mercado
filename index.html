@@ -1,291 +1,486 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Bom Dia Mercado</title>
-  <meta name="description" content="Boletim Bom Dia Mercado — sem conteúdo informado.">
-  <meta name="robots" content="noindex, nofollow">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bom Dia Mercado - ">
+    <meta property="og:title" content="Bom Dia Mercado — ">
+    <meta property="og:description" content="Bom Dia Mercado - Relatório diário de mercado">
+    <meta property="og:image" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="article">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="twitter:card" content="summary_large_image">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bom Dia Mercado - 18 de Setembro de 2026</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@400;700&display=swap');
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Bom Dia Mercado">
-  <meta property="og:description" content="Boletim Bom Dia Mercado — sem conteúdo informado.">
-  <meta property="og:type" content="article">
-  <meta property="og:image" content="https://bomdiamercado.github.io/Bom-Dia-Mercado/preview.png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Bom Dia Mercado">
-  <meta name="twitter:card" content="summary_large_image">
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-  <link rel="icon" type="image/png" href="icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #f0f2f5;
+    color: #2c3e50;
+    line-height: 1.7;
+    font-size: 15px;
+  }
 
-  <style>
-    :root {
-      --marine:      #12333F;
-      --marine-deep: #0D262F;
-      --paper:       #E9E6DE;
-      --amber:       #C98A1E;
-      --ink:         #1A1A1A;
-      --muted:       #5A5A5A;
-    }
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #1a3a52 0%, #0d2137 100%);
+    padding: 24px 20px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(245,166,35,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
 
-    body {
-      font-family: 'Carlito', Calibri, sans-serif;
-      background: var(--paper);
-      color: var(--ink);
-      font-size: 16px;
-      line-height: 1.6;
-    }
+  .header-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
 
-    header {
-      background: var(--marine);
-      color: #fff;
-      padding: 18px 24px 14px;
-      display: flex;
-      align-items: center;
-      gap: 14px;
-    }
-    .logo-sol { flex-shrink: 0; }
-    .logo-texto h1 {
-      font-size: 1.45rem;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      line-height: 1.1;
-      text-transform: uppercase;
-    }
-    .logo-texto .data {
-      font-size: 0.82rem;
-      opacity: 0.75;
-      margin-top: 2px;
-      letter-spacing: 0.03em;
-    }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 16px;
+  }
 
-    .manchete {
-      background: var(--marine-deep);
-      color: #fff;
-      padding: 20px 24px 18px;
-    }
-    .manchete h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-      line-height: 1.3;
-    }
-    .manchete p {
-      font-size: 0.92rem;
-      line-height: 1.55;
-      opacity: 0.88;
-      text-align: justify;
-      hyphens: auto;
-    }
+  .logo-text {
+    font-size: 28px;
+    font-weight: 900;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    text-transform: uppercase;
+  }
 
-    .painel {
-      background: var(--marine);
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid rgba(255,255,255,0.08);
-    }
-    .cotacao {
-      padding: 12px 14px;
-      border-right: 1px solid rgba(255,255,255,0.08);
-      color: #fff;
-    }
-    .cotacao:last-child { border-right: none; }
-    .cotacao .label {
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      opacity: 0.6;
-      margin-bottom: 3px;
-    }
-    .cotacao .valor {
-      font-size: 1.05rem;
-      font-weight: 700;
-      line-height: 1.1;
-    }
-    .cotacao .var {
-      font-size: 0.72rem;
-      margin-top: 2px;
-      opacity: 0.8;
-    }
-    .var.pos { color: #6fcf97; }
-    .var.neg { color: #eb5757; }
-    .var.neu { color: rgba(255,255,255,0.5); }
+  .logo-text span {
+    color: #f5a623;
+  }
 
-    .corpo {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 0 20px 40px;
-    }
+  .header-date {
+    font-size: 13px;
+    color: rgba(255,255,255,0.6);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
 
-    .agenda {
-      margin: 24px 0 8px;
-      border: 1px solid rgba(18,51,63,0.18);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .agenda-titulo {
-      background: var(--marine);
-      color: #fff;
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 8px 14px;
-    }
-    .agenda-lista { list-style: none; }
-    .agenda-lista li {
-      display: grid;
-      grid-template-columns: 28px 52px 1fr;
-      gap: 8px;
-      padding: 7px 14px;
-      font-size: 0.85rem;
-      border-bottom: 1px solid rgba(18,51,63,0.08);
-      align-items: start;
-      line-height: 1.4;
-    }
-    .agenda-lista li:last-child { border-bottom: none; }
-    .agenda-lista li:nth-child(even) { background: rgba(18,51,63,0.03); }
-    .agenda-lista .hora {
-      color: var(--muted);
-      font-size: 0.78rem;
-      padding-top: 1px;
-    }
-    .agenda-lista .desc strong {
-      display: block;
-      font-weight: 700;
-      color: var(--marine);
-    }
-    .agenda-lista .desc span {
-      color: var(--muted);
-      font-size: 0.80rem;
-    }
+  .header-edition {
+    font-size: 11px;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 1px;
+  }
 
-    .secao { margin-top: 24px; }
-    .secao h3 {
-      font-size: 0.72rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--marine);
-      border-bottom: 2px solid var(--amber);
-      padding-bottom: 4px;
-      margin-bottom: 10px;
-    }
-    .secao p {
-      font-size: 0.915rem;
-      line-height: 1.65;
-      text-align: justify;
-      hyphens: auto;
-      color: var(--ink);
-    }
+  /* HEADLINE BANNER */
+  .headline-banner {
+    background: linear-gradient(135deg, #f5a623 0%, #e8941a 100%);
+    padding: 20px;
+    text-align: center;
+  }
 
-    .num { font-weight: 700; color: var(--marine); }
+  .headline-banner h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #1a3a52;
+    line-height: 1.3;
+    max-width: 700px;
+    margin: 0 auto;
+  }
 
-    footer {
-      background: var(--marine-deep);
-      color: rgba(255,255,255,0.45);
-      font-size: 0.72rem;
-      text-align: center;
-      padding: 14px 20px;
-      margin-top: 32px;
-      letter-spacing: 0.03em;
-    }
-  </style>
-</head>
-<body>
+  .headline-banner .subtitle {
+    font-size: 14px;
+    color: rgba(26,58,82,0.75);
+    margin-top: 8px;
+    font-weight: 500;
+  }
 
-<header>
-  <svg class="logo-sol" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-    <circle cx="24" cy="24" r="10" fill="#E8B04B"/>
-    <g stroke="#E8B04B" stroke-width="2.2" stroke-linecap="round">
-      <line x1="24" y1="4"  x2="24" y2="10"/>
-      <line x1="24" y1="38" x2="24" y2="44"/>
-      <line x1="4"  y1="24" x2="10" y2="24"/>
-      <line x1="38" y1="24" x2="44" y2="24"/>
-      <line x1="9.4"  y1="9.4"  x2="13.7" y2="13.7"/>
-      <line x1="34.3" y1="34.3" x2="38.6" y2="38.6"/>
-      <line x1="38.6" y1="9.4"  x2="34.3" y2="13.7"/>
-      <line x1="13.7" y1="34.3" x2="9.4"  y2="38.6"/>
-    </g>
-  </svg>
-  <div class="logo-texto">
-    <h1>Bom Dia Mercado</h1>
-    <div class="data">Nenhuma data informada</div>
-  </div>
-</header>
+  .byline {
+    font-size: 12px;
+    color: rgba(26,58,82,0.6);
+    margin-top: 10px;
+    font-style: italic;
+  }
 
-<div class="manchete">
-  <h2>Nenhum conteúdo informado</h2>
-  <p>O texto do boletim não foi fornecido. Para gerar o relatório, cole o conteúdo do boletim no campo indicado e solicite novamente.</p>
-</div>
+  /* MAIN CONTAINER */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 20px 16px;
+  }
 
-<div class="painel">
-  <div class="cotacao">
-    <div class="label">Dólar</div>
-    <div class="valor"><span class="num">—</span></div>
-    <div class="var neu">—</div>
-  </div>
-  <div class="cotacao">
-    <div class="label">Ibovespa</div>
-    <div class="valor"><span class="num">—</span></div>
-    <div class="var neu">—</div>
-  </div>
-  <div class="cotacao">
-    <div class="label">Brent</div>
-    <div class="valor"><span class="num">—</span></div>
-    <div class="var neu">—</div>
-  </div>
-  <div class="cotacao">
-    <div class="label">T-Note 10a</div>
-    <div class="valor"><span class="num">—</span></div>
-    <div class="var neu">—</div>
-  </div>
-</div>
+  /* COTAÇÕES PANEL */
+  .quotes-panel {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+  }
 
-<div class="corpo">
+  .quote-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px 14px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    border: 1px solid rgba(0,0,0,0.04);
+    position: relative;
+    overflow: hidden;
+  }
 
-  <div class="secao">
-    <h3>Juros</h3>
-    <p>Nenhum dado disponível. Insira o texto do boletim para que esta seção seja preenchida.</p>
-  </div>
+  .quote-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
 
-  <div class="secao">
-    <h3>Dólar</h3>
-    <p>Nenhum dado disponível. Insira o texto do boletim para que esta seção seja preenchida.</p>
-  </div>
+  .quote-card.up::before { background: #27ae60; }
+  .quote-card.down::before { background: #e74c3c; }
+  .quote-card.neutral::before { background: #f5a623; }
 
-  <div class="secao">
-    <h3>Bolsa</h3>
-    <p>Nenhum dado disponível. Insira o texto do boletim para que esta seção seja preenchida.</p>
-  </div>
+  .quote-label {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #7f8c8d;
+    font-weight: 700;
+    margin-bottom: 6px;
+  }
 
-  <div class="secao">
-    <h3>Eleições</h3>
-    <p>Nenhum dado disponível. Insira o texto do boletim para que esta seção seja preenchida.</p>
-  </div>
+  .quote-value {
+    font-size: 20px;
+    font-weight: 800;
+    color: #1a3a52;
+    line-height: 1.2;
+  }
 
-  <div class="secao">
-    <h3>Petróleo</h3>
-    <p>Nenhum dado disponível. Insira o texto do boletim para que esta seção seja preenchida.</p>
-  </div>
+  .quote-change {
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 4px;
+  }
 
-  <div class="secao">
-    <h3>Petrobras</h3>
-    <p>Nenhuma notícia relevante.</p>
-  </div>
+  .quote-change.positive { color: #27ae60; }
+  .quote-change.negative { color: #e74c3c; }
 
-</div>
+  .quote-detail {
+    font-size: 10px;
+    color: #95a5a6;
+    margin-top: 2px;
+  }
 
-<footer>
-  Bom Dia Mercado
-</footer>
+  /* LIDE / OPENING */
+  .lide-card {
+    background: linear-gradient(135deg, #1a3a52, #1e4a66);
+    border-radius: 14px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
 
-</body>
-</html>
+  .lide-card::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(245,166,35,0.12) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .lide-card p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.92);
+    position: relative;
+    z-index: 1;
+  }
+
+  .lide-card p strong {
+    color: #f5a623;
+  }
+
+  /* SECTION CARDS */
+  .section-card {
+    background: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.04);
+    overflow: hidden;
+  }
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px 22px;
+    border-bottom: 1px solid #f0f2f5;
+    position: relative;
+  }
+
+  .section-header::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+  }
+
+  .section-header.boj::before { background: #e74c3c; }
+  .section-header.petroleo::before { background: #2c3e50; }
+  .section-header.juros::before { background: #2980b9; }
+  .section-header.eleicoes::before { background: #f5a623; }
+  .section-header.dolar::before { background: #27ae60; }
+  .section-header.bolsa::before { background: #8e44ad; }
+  .section-header.eua::before { background: #3498db; }
+  .section-header.master::before { background: #c0392b; }
+  .section-header.cias::before { background: #16a085; }
+  .section-header.agenda::before { background: #f39c12; }
+  .section-header.destaques::before { background: #1a3a52; }
+
+  .section-icon {
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    flex-shrink: 0;
+  }
+
+  .section-icon.boj { background: #fde8e8; }
+  .section-icon.petroleo { background: #ebeef0; }
+  .section-icon.juros { background: #e8f0fe; }
+  .section-icon.eleicoes { background: #fef5e0; }
+  .section-icon.dolar { background: #e8f8ef; }
+  .section-icon.bolsa { background: #f0e8f8; }
+  .section-icon.eua { background: #e8f0fe; }
+  .section-icon.master { background: #fde8e8; }
+  .section-icon.cias { background: #e0f7f1; }
+  .section-icon.agenda { background: #fef5e0; }
+  .section-icon.destaques { background: #e8edf2; }
+
+  .section-title {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a3a52;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .section-subtitle {
+    font-size: 11px;
+    color: #95a5a6;
+    font-weight: 500;
+  }
+
+  .section-body {
+    padding: 20px 22px 22px;
+  }
+
+  .section-body p {
+    margin-bottom: 14px;
+    color: #34495e;
+    font-size: 14.5px;
+    line-height: 1.75;
+  }
+
+  .section-body p:last-child {
+    margin-bottom: 0;
+  }
+
+  .section-body p strong {
+    color: #1a3a52;
+    font-weight: 700;
+  }
+
+  .bullet-item {
+    padding-left: 16px;
+    position: relative;
+    margin-bottom: 12px;
+  }
+
+  .bullet-item::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #f5a623;
+    font-weight: 700;
+  }
+
+  /* DI TABLE */
+  .di-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0 8px;
+    font-size: 13px;
+  }
+
+  .di-table th {
+    background: #1a3a52;
+    color: #ffffff;
+    padding: 10px 14px;
+    text-align: left;
+    font-weight: 700;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .di-table th:first-child {
+    border-radius: 8px 0 0 0;
+  }
+
+  .di-table th:last-child {
+    border-radius: 0 8px 0 0;
+  }
+
+  .di-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0f2f5;
+    font-weight: 500;
+  }
+
+  .di-table tr:nth-child(even) {
+    background: #f9fafb;
+  }
+
+  .di-table tr:last-child td:first-child {
+    border-radius: 0 0 0 8px;
+  }
+
+  .di-table tr:last-child td:last-child {
+    border-radius: 0 0 8px 0;
+  }
+
+  .di-table .down-val {
+    color: #27ae60;
+    font-weight: 700;
+  }
+
+  /* HIGHLIGHT BOX */
+  .highlight-box {
+    background: linear-gradient(135deg, #fef9f0, #fef5e0);
+    border-left: 4px solid #f5a623;
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+
+  .highlight-box.blue {
+    background: linear-gradient(135deg, #f0f5fa, #e8f0fe);
+    border-left-color: #2980b9;
+  }
+
+  .highlight-box.red {
+    background: linear-gradient(135deg, #fdf2f2, #fde8e8);
+    border-left-color: #e74c3c;
+  }
+
+  .highlight-box.green {
+    background: linear-gradient(135deg, #f0faf5, #e8f8ef);
+    border-left-color: #27ae60;
+  }
+
+  .highlight-box p {
+    margin-bottom: 0 !important;
+    color: #2c3e50;
+    font-weight: 500;
+  }
+
+  /* AGENDA */
+  .agenda-list {
+    list-style: none;
+  }
+
+  .agenda-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f2f5;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .agenda-list li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .agenda-flag {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 30px;
+    text-align: center;
+  }
+
+  .agenda-time {
+    font-weight: 700;
+    color: #f5a623;
+    min-width: 48px;
+    font-size: 13px;
+    flex-shrink: 0;
+  }
+
+  .agenda-text {
+    color: #34495e;
+    line-height: 1.6;
+  }
+
+  /* CIAS LIST */
+  .cia-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #f0f2f5;
+  }
+
+  .cia-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .cia-name {
+    font-weight: 800;
+    color: #1a3a52;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline;
+  }
+
+  .cia-text {
+    color: #34495e;
+    font-size: 14px;
+    line-height: 1
