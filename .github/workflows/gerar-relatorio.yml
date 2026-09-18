@@ -1,0 +1,98 @@
+name: Gerar relatório
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  gerar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Gerar HTML e publicar
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TITULO: ${{ github.event.issue.title }}
+          TEXTO: ${{ github.event.issue.body }}
+        run: |
+          python3 - <<'FIM'
+          import os, json, urllib.request, re
+
+          titulo = (os.environ.get("TITULO") or "").strip().lower()
+          texto  = os.environ.get("TEXTO") or ""
+
+          # o título da issue decide qual relatório sai e onde ele é gravado
+          if "cambio" in titulo or "câmbio" in titulo or "dolar" in titulo or "dólar" in titulo:
+              destino = "dolar.html"
+              instrucao = open("instrucoes-cambio.txt", encoding="utf-8").read()
+          else:
+              destino = "index.html"
+              instrucao = open("instrucoes-bomdia.txt", encoding="utf-8").read()
+
+          modelo = open("modelo-completo.html", encoding="utf-8").read()
+
+          prompt = (
+              instrucao
+              + "\n\n===== MODELO A PREENCHER =====\n\n" + modelo
+              + "\n\n===== TEXTO DO BOLETIM =====\n\n" + texto
+          )
+
+          req = urllib.request.Request(
+              "https://api.anthropic.com/v1/messages",
+              data=json.dumps({
+                  "model": "claude-sonnet-4-6",
+                  "max_tokens": 16000,
+                  "messages": [{"role": "user", "content": prompt}],
+              }).encode(),
+              headers={
+                  "content-type": "application/json",
+                  "x-api-key": os.environ["ANTHROPIC_API_KEY"],
+                  "anthropic-version": "2023-06-01",
+              },
+          )
+          with urllib.request.urlopen(req, timeout=300) as r:
+              resposta = json.load(r)
+
+          html = "".join(b.get("text", "") for b in resposta["content"])
+
+          # remove cercas de código, se o modelo tiver colocado
+          html = re.sub(r"^\s*```[a-z]*\s*", "", html)
+          html = re.sub(r"\s*```\s*$", "", html)
+          html = html.strip()
+
+          if not html.lower().startswith("<!doctype"):
+              raise SystemExit("A resposta não começou com <!DOCTYPE. Nada foi gravado.")
+
+          open(destino, "w", encoding="utf-8").write(html + "\n")
+          print("Gravado:", destino, len(html), "caracteres")
+          FIM
+
+      - name: Commit
+        run: |
+          git config user.name  "github-actions"
+          git config user.email "github-actions@github.com"
+          git add -A
+          git diff --staged --quiet || git commit -m "Relatório da issue #${{ github.event.issue.number }}"
+          git push
+
+      - name: Avisar e fechar a issue
+        uses: actions/github-script@v7
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: 'Relatório publicado. O link atualiza em cerca de um minuto: https://bomdiamercado.github.io/Bom-Dia-Mercado/'
+            });
+            await github.rest.issues.update({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'closed'
+            });
