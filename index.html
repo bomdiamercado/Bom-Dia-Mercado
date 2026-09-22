@@ -3,15 +3,13 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- TÍTULO: "Bom Dia Mercado — DD/MM/AAAA" -->
-  <title>Bom Dia Mercado — 22/09/2025</title>
-  <!-- DESCRIPTION: manchete resumida em uma linha -->
-  <meta name="description" content="Mercados apostam em encontro Trump-Xi; petróleo recua pelo quarto pregão; Lula abre debate na ONU; agenda cheia com Copom e IPCA-15.">
+  <title>Bom Dia Mercado — 21/09/2026</title>
+  <meta name="description" content="Mercados abrem positivos com expectativa do encontro Trump-Xi; petróleo recua pelo 4º pregão e agenda doméstica traz ata do Copom e IPCA-15">
   <meta name="robots" content="noindex, nofollow">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Bom Dia Mercado — 22/09/2025">
-  <meta property="og:description" content="Mercados apostam em encontro Trump-Xi; petróleo recua pelo quarto pregão; Lula abre debate na ONU; agenda cheia com Copom e IPCA-15.">
+  <meta property="og:title" content="Bom Dia Mercado — 21/09/2026">
+  <meta property="og:description" content="Mercados abrem positivos com expectativa do encontro Trump-Xi; petróleo recua pelo 4º pregão e agenda doméstica traz ata do Copom e IPCA-15">
   <meta property="og:type" content="article">
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Bom Dia Mercado">
@@ -26,6 +24,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
   <style>
+    html, body, header, .manchete, .painel, .cotacao, .agenda-titulo, footer {
+      -webkit-print-color-adjust: exact !important;
+      print-color-adjust: exact !important;
+    }
+
     :root {
       --marine:      #12333F;
       --marine-deep: #0D262F;
@@ -113,11 +116,12 @@
       font-size: 1.05rem;
       font-weight: 700;
       line-height: 1.1;
+      color: #fff;
     }
     .cotacao .var {
       font-size: 0.72rem;
       margin-top: 2px;
-      opacity: 0.8;
+      opacity: 0.9;
     }
     .var.pos { color: #6fcf97; }
     .var.neg { color: #eb5757; }
@@ -206,43 +210,7 @@
 
     /* ── NÚMEROS ── */
     .num { font-weight: 700; color: var(--marine); }
-
-    /* ── TABELA (opcional) ── */
-    .tabela {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.85rem;
-      margin-top: 12px;
-    }
-    .tabela th {
-      background: var(--marine);
-      color: #fff;
-      text-align: left;
-      padding: 7px 10px;
-      font-size: 0.72rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-    }
-    .tabela td {
-      padding: 6px 10px;
-      border-bottom: 1px solid rgba(18,51,63,0.10);
-    }
-    .tabela tr:last-child td { border-bottom: none; }
-    .tabela tr:nth-child(even) td { background: rgba(18,51,63,0.03); }
-
-    /* ── GRÁFICO SVG (opcional) ──
-       Fórmula de posição vertical:
-       y = 190 - (valor - BASE) / ESCALA * 150
-       Exemplo base=5,00; escala=0,40
-    ── */
-    .grafico-wrap {
-      margin-top: 16px;
-      background: #fff;
-      border: 1px solid rgba(18,51,63,0.12);
-      border-radius: 4px;
-      overflow: hidden;
-    }
-    .grafico-wrap svg { display: block; width: 100%; height: auto; }
+    .painel .cotacao .valor .num { color: #FFFFFF !important; font-weight: 700; }
 
     /* ── RODAPÉ ── */
     footer {
@@ -254,16 +222,17 @@
       margin-top: 32px;
       letter-spacing: 0.03em;
     }
+
+    @media print {
+      @page { margin: 0; }
+      body { background: var(--paper) !important; }
+      .painel { background: var(--marine) !important; }
+      .painel .cotacao .valor .num { color: #FFFFFF !important; }
+    }
   </style>
 </head>
 <body>
-
-<!-- ═══════════════════════════════════════════
-     HEADER — substituir DATA_LONGA pela data por extenso
-     Exemplo: "Quinta-feira, 17 de setembro de 2026"
-     ═══════════════════════════════════════════ -->
 <header>
-  <!-- Sol SVG — manter sempre no Bom Dia Mercado; remover no Relatório de Câmbio -->
   <svg class="logo-sol" width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
     <circle cx="24" cy="24" r="10" fill="#E8B04B"/>
     <g stroke="#E8B04B" stroke-width="2.2" stroke-linecap="round">
@@ -279,22 +248,15 @@
   </svg>
   <div class="logo-texto">
     <h1>Bom Dia Mercado</h1>
-    <div class="data">Segunda-feira, 22 de setembro de 2025</div>
+    <div class="data">Segunda-feira, 21 de setembro de 2026</div>
   </div>
 </header>
 
-<!-- ═══════════════════════════════════════════
-     MANCHETE — título curto + parágrafo de abertura
-     ═══════════════════════════════════════════ -->
 <div class="manchete">
   <h2>MERCADOS APOSTAM EM AVANÇO ENTRE TRUMP E XI</h2>
-  <p>A semana começa com os mercados em clima positivo, embalados pela expectativa do encontro entre Trump e Xi Jinping previsto para quinta-feira em Washington. O petróleo recua pelo quarto pregão seguido, aliviado pela melhora do fluxo pelo Estreito de Ormuz e por novas iniciativas diplomáticas, apesar dos ataques houthis à infraestrutura saudita. No Brasil, Lula abre amanhã o debate geral da Assembleia da ONU, enquanto o caso Master produz novos desdobramentos envolvendo Moraes, o PGR e a PF. Na agenda econômica, a ata do Copom, o IPCA-15 e o Relatório de Política Monetária dividem as atenções com discursos do Fed e os PMIs nos Estados Unidos e na Europa.</p>
+  <p>A semana começa com os mercados em clima positivo, embalados pela expectativa do encontro entre Trump e Xi Jinping, marcado para quinta-feira em Washington. O petróleo recua pelo quarto pregão seguido, apesar da escalada no Oriente Médio, com a melhora do fluxo pelo Estreito de Ormuz e novas iniciativas diplomáticas ajudando a aliviar o Brent. No Brasil, Lula abre amanhã o debate da Assembleia Geral da ONU, a poucos dias do primeiro turno das eleições. Na agenda econômica, a ata do Copom, o IPCA-15 e uma bateria de discursos do Fed dividem as atenções com os PMIs nos Estados Unidos e na Europa.</p>
 </div>
 
-<!-- ═══════════════════════════════════════════
-     PAINEL DE COTAÇÕES — 4 blocos
-     var: usar classe "pos" (verde), "neg" (vermelho) ou "neu" (neutro)
-     ═══════════════════════════════════════════ -->
 <div class="painel">
   <div class="cotacao">
     <div class="label">Dólar</div>
@@ -302,9 +264,9 @@
     <div class="var neg">+0,10%</div>
   </div>
   <div class="cotacao">
-    <div class="label">Ibovespa</div>
-    <div class="valor"><span class="num">185.229,17</span></div>
-    <div class="var neg">-0,41%</div>
+    <div class="label">DXY</div>
+    <div class="valor"><span class="num"></span></div>
+    <div class="var "></div>
   </div>
   <div class="cotacao">
     <div class="label">Brent</div>
@@ -320,12 +282,6 @@
 
 <div class="corpo">
 
-  <!-- ═══════════════════════════════════════════
-       AGENDA — um <li> por evento
-       Colunas: bandeira SVG | hora (ex: "8h00") | descrição
-       O gerar.py preenche a bandeira pelo código do país (BR, US, EU...)
-       Se sem hora, usar "no dia" na coluna de hora
-       ═══════════════════════════════════════════ -->
   <div class="agenda">
     <div class="agenda-titulo">Agenda de hoje</div>
     <ul class="agenda-lista">
@@ -333,8 +289,24 @@
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
         <span class="hora">8h25</span>
         <span class="desc">
-          <strong>Pesquisa Focus – Banco Central</strong>
-          <span>Divulgação semanal das expectativas de mercado</span>
+          <strong>Pesquisa Focus</strong>
+          <span>Banco Central divulga o relatório semanal de expectativas de mercado</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">10h30</span>
+        <span class="desc">
+          <strong>Boletim Macrofiscal e Arrecadação Federal de agosto</strong>
+          <span>Ministério da Fazenda divulga novas projeções oficiais para atividade e inflação, além do resultado da arrecadação de agosto</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Pesquisas eleitorais Quaest e BTG Nexus</strong>
+          <span>Divulgação de pesquisas de intenção de voto para a eleição presidencial</span>
         </span>
       </li>
       <li>
@@ -348,16 +320,8 @@
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>Pesquisas eleitorais – Quaest e BTG Nexus</strong>
-          <span>Primeiras pesquisas da semana antes do primeiro turno</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Lula abre debate geral na Assembleia Geral da ONU</strong>
-          <span>Discurso previsto para amanhã, terça-feira</span>
+          <strong>Lula na CNN com Christiane Amanpour</strong>
+          <span>Entrevista do presidente Lula à jornalista da CNN em Nova York</span>
         </span>
       </li>
       <li>
@@ -365,15 +329,7 @@
         <span class="hora">no dia</span>
         <span class="desc">
           <strong>Ata do Copom</strong>
-          <span>Divulgação na terça-feira; mercado busca pistas sobre próximos passos da Selic</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
-        <span class="hora">10h30</span>
-        <span class="desc">
-          <strong>Boletim Macrofiscal da Fazenda</strong>
-          <span>Novas projeções para atividade e inflação, mais resultado da arrecadação federal de agosto; divulgação na terça-feira</span>
+          <span>Amanhã, terça-feira; o mercado busca pistas sobre os próximos passos da Selic após corte de 0,25 ponto para 13,75%</span>
         </span>
       </li>
       <li>
@@ -381,23 +337,23 @@
         <span class="hora">no dia</span>
         <span class="desc">
           <strong>Discursos de Williams, Jefferson e Barkin (Fed)</strong>
-          <span>Terça-feira</span>
+          <span>Amanhã, terça-feira</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="6.7" fill="#000"/><rect width="28" height="6.7" y="6.7" fill="#DD0000"/><rect width="28" height="6.6" y="13.4" fill="#FFCE00"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Eleições estaduais na Alemanha — resultado</strong>
+          <span>CDU registrou perdas expressivas em Berlim e Mecklenburg-Pomerânia Ocidental; AfD ampliou votação</span>
         </span>
       </li>
       <li>
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>PMIs preliminares de setembro – EUA e Europa</strong>
-          <span>Quarta-feira; previsão: indústria 54, serviços 56, composto 56,3</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#003399"/><g fill="#FFCC00"><circle cx="14" cy="5" r="1"/><circle cx="17.5" cy="6" r="1"/><circle cx="19.5" cy="9" r="1"/><circle cx="18.5" cy="12.5" r="1"/><circle cx="14" cy="14" r="1"/><circle cx="9.5" cy="12.5" r="1"/><circle cx="8.5" cy="9" r="1"/><circle cx="10.5" cy="6" r="1"/></g></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>PMIs preliminares de setembro – Europa</strong>
-          <span>Quarta-feira</span>
+          <strong>PMIs preliminares de setembro (EUA e Europa)</strong>
+          <span>Quarta-feira; previsão de 54 na indústria, 56 nos serviços e 56,3 no composto para os EUA</span>
         </span>
       </li>
       <li>
@@ -409,18 +365,18 @@
         </span>
       </li>
       <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#003399"/><g fill="#FFCC00"><circle cx="14" cy="5" r="1"/><circle cx="17.5" cy="6" r="1"/><circle cx="19.5" cy="9" r="1"/><circle cx="18.5" cy="12.5" r="1"/><circle cx="14" cy="14" r="1"/><circle cx="9.5" cy="12.5" r="1"/><circle cx="8.5" cy="9" r="1"/><circle cx="10.5" cy="6" r="1"/></g></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>PMIs preliminares de setembro (Europa)</strong>
+          <span>Quarta-feira</span>
+        </span>
+      </li>
+      <li>
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>Estoques semanais de petróleo – DoE</strong>
-          <span>Quarta-feira</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#C9C4B8"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>AtlasIntel – Pesquisa eleitoral</strong>
+          <strong>Estoques semanais de petróleo (DoE)</strong>
           <span>Quarta-feira</span>
         </span>
       </li>
@@ -428,16 +384,32 @@
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>Relatório de Política Monetária do BC + coletiva de Galípolo</strong>
-          <span>Quinta-feira</span>
+          <strong>AtlasIntel — pesquisa eleitoral</strong>
+          <span>Quarta-feira</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Encontro Trump e Xi Jinping</strong>
+          <span>Quinta-feira em Washington; pauta inclui trégua tarifária, Taiwan, Irã e inteligência artificial</span>
         </span>
       </li>
       <li>
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>Relatório de Avaliação de Receitas e Despesas – 4º bimestre</strong>
-          <span>Fazenda e Planejamento; quinta-feira</span>
+          <strong>Relatório de Política Monetária do BC</strong>
+          <span>Quinta-feira; acompanhado de entrevista coletiva do presidente do BC, Gabriel Galípolo</span>
+        </span>
+      </li>
+      <li>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
+        <span class="hora">no dia</span>
+        <span class="desc">
+          <strong>Relatório de Avaliação de Receitas e Despesas — 4º bimestre</strong>
+          <span>Quinta-feira; Fazenda e Planejamento; deverá detalhar espaço fiscal para reajuste do Bolsa Família</span>
         </span>
       </li>
       <li>
@@ -449,11 +421,11 @@
         </span>
       </li>
       <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#C9C4B8"/></svg></span>
+        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#009B3A"/><path d="M14 2.5 25.5 10 14 17.5 2.5 10Z" fill="#FEDF00"/><circle cx="14" cy="10" r="4.2" fill="#002776"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>TCU julga política de preços da Petrobras</strong>
-          <span>Sessão extraordinária e reservada; quarta-feira</span>
+          <strong>Datafolha e Real Time Big Data — pesquisas eleitorais</strong>
+          <span>Quinta-feira</span>
         </span>
       </li>
       <li>
@@ -462,14 +434,6 @@
         <span class="desc">
           <strong>Discursos de Williams, Barkin, Hammack e Paulson (Fed)</strong>
           <span>Quinta e sexta-feira</span>
-        </span>
-      </li>
-      <li>
-        <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#C9C4B8"/></svg></span>
-        <span class="hora">no dia</span>
-        <span class="desc">
-          <strong>Datafolha e Real Time Big Data – Pesquisas eleitorais</strong>
-          <span>Quinta-feira</span>
         </span>
       </li>
       <li>
@@ -484,99 +448,47 @@
         <span class="bandeira"><svg viewBox="0 0 28 20"><rect width="28" height="20" fill="#fff"/><g fill="#B22234"><rect width="28" height="1.55" y="0"/><rect width="28" height="1.55" y="3.1"/><rect width="28" height="1.55" y="6.2"/><rect width="28" height="1.55" y="9.3"/><rect width="28" height="1.55" y="12.4"/><rect width="28" height="1.55" y="15.5"/><rect width="28" height="1.55" y="18.4"/></g><rect width="12" height="10.8" fill="#3C3B6E"/></svg></span>
         <span class="hora">no dia</span>
         <span class="desc">
-          <strong>Confiança do consumidor – Universidade de Michigan (leitura final de setembro)</strong>
+          <strong>Confiança do consumidor da Universidade de Michigan — leitura final de setembro</strong>
           <span>Sexta-feira; inclui expectativas de inflação</span>
         </span>
       </li>
     </ul>
   </div>
 
-  <!-- ═══════════════════════════════════════════
-       SEÇÕES — ordem fixa:
-       JUROS | DÓLAR | BOLSA | ELEIÇÕES | PETRÓLEO | PETROBRAS
-       Petrobras: "Nenhuma notícia relevante." se não houver
-       Números sempre dentro de <span class="num">
-       ═══════════════════════════════════════════ -->
-
   <div class="secao">
     <h3>Juros</h3>
-    <p>Os juros futuros domésticos exibiram resistência na sexta-feira, operando de lado mesmo diante da renovada pressão nos Treasuries americanos, com o yield da T-Note de dez anos voltando a romper os 5%, encerrando em 5,005% (ante 4,929%). A curva do DI seguiu blindada pelo trade eleitoral: a taxa do DI para Jan/27 ficou estável em 13,555%; Jan/28 fechou em 13,630%; Jan/29 em 13,840%; Jan/31 em 14,020%; e Jan/33 em 14,130%. A semana traz a ata do Copom de terça-feira, referente à reunião que cortou a Selic em 0,25 ponto para 13,75%, e o mercado buscará pistas sobre os próximos passos do ciclo, após o comunicado reconhecer desaceleração da atividade e melhora da inflação. O Bradesco revisou para baixo sua projeção de PIB para 2025, de 1,9% para 1,7%, e para 2027, de 1,3% para 1,0%, refletindo dados do terceiro trimestre que seguem sinalizando moderação do ritmo.</p>
+    <p></p>
   </div>
 
   <div class="secao">
     <h3>Dólar</h3>
-    <p>O dólar à vista fechou a sessão de sexta-feira em leve alta de 0,10%, cotado a R$ 5,1442, sem reação mais intensa apesar da pressão vinda do exterior. O real se mostrou relativamente resiliente mesmo diante do tombo do iene, após o BoJ ter deixado em aberto seus próximos passos depois de elevar os juros em 25 pontos-base a 1,25%. O cenário eleitoral indefinido criou algum mal-estar pela manhã, mas não evoluiu para movimento mais negativo. O sócio-fundador da SPX Capital, Rogério Xavier, alertou durante seminário do FGV/Ibre e Estadão que o Brasil caminha em trajetória fiscal perigosa, com endividamento semelhante ao de países desenvolvidos, sem contar com a mesma credibilidade, e se mostrou contrário a propostas de cortar juros de forma forçada ou usar reservas para controlar o câmbio.</p>
+    <p></p>
   </div>
 
   <div class="secao">
     <h3>Bolsa</h3>
-    <p>O Ibovespa encerrou a sessão de sexta-feira em queda de 0,41%, aos 185.229,17 pontos, com giro de R$ 26,8 bilhões turbinado pelo exercício de opções. O alívio do petróleo pressionou as ações da Petrobras, com a ON recuando 1,09% a R$ 53,41 e a PN caindo 0,23% a R$ 48,50. Vale recuou 1,53% a R$ 73,37, afetada pelo aumento dos fretes Brasil-China, que chegaram a cerca de US$ 42 por tonelada, e pela avaliação de que cerca de 120 milhões de toneladas de minério podem ficar economicamente inviáveis nas condições atuais. Entre os bancos, Santander unit caiu 3,47% a R$ 29,47, Bradesco PN recuou 0,88% a R$ 17,99 e Itaú PN cedeu 0,59% a R$ 42,33, enquanto BB ON avançou 1,84% a R$ 23,20 e BTG unit ganhou 0,43% a R$ 61,40. Em Nova York, o Dow Jones caiu 0,18% a 51.682,64 pontos, o S&P 500 subiu 0,17% a 7.650,50 pontos e o Nasdaq avançou 0,39% a 26.522,55 pontos.</p>
+    <p></p>
   </div>
 
   <div class="secao">
     <h3>Eleições</h3>
-    <p>Faltando duas semanas para o primeiro turno, o cenário eleitoral domina as atenções nos mercados e na política. O calendário de pesquisas prevê Quaest e BTG Nexus nesta segunda-feira, AtlasIntel na quarta-feira e Datafolha e Real Time Big Data na quinta-feira, funcionando como termômetros da competitividade da candidatura bolsonarista. O caso Master ganhou novos capítulos no fim de semana: um vídeo mostrou o ministro Alexandre de Moraes desembarcando de aeronave ligada ao banqueiro Joseph Vorcaro, após ele ter declarado que jamais havia viajado no avião do empresário; outro vídeo, de 2024, mostrou Vorcaro em festa do Master em Londres com o diretor-geral da PF, Andrei Rodrigues. A pressão também recaiu sobre o procurador-geral Paulo Gonet, após foto ao seu lado de Vorcaro em Londres. O ministro Flávio Dino deu prazo de 90 dias para que a União apresente avaliação do arcabouço da CVM e propostas de aprimoramento à autarquia, diante das fragilidades de supervisão apontadas no caso.</p>
+    <p></p>
   </div>
 
   <div class="secao">
     <h3>Petróleo</h3>
-    <p>O petróleo abriu esta segunda-feira em queda pelo quarto pregão consecutivo, com o Brent recuando 2,17% no mercado eletrônico para US$ 101,60, mesmo diante da escalada de tensões no Oriente Médio durante o fim de semana. O principal fator de alívio foi a melhora do fluxo pelo Estreito de Ormuz: segundo o Centcom, o volume de petróleo, cargas e GNL que atravessou o estreito nas últimas duas semanas atingiu o maior nível em seis meses, com as forças americanas dizendo ter protegido mais de 2 mil navios e auxiliado o transporte de mais de 1 bilhão de barris nos últimos dois meses. Do lado da tensão, os houthis lançaram um míssil balístico contra Riad, interceptado pela defesa saudita, e reivindicaram ataques contra instalações da Saudi Aramco em Yanbu, polo de exportação no Mar Vermelho que recebe o oleoduto Leste-Oeste, com capacidade para cerca de 4 milhões de barris por dia. A China também ajudou a limitar a disparada dos preços ao acumular cerca de 1,4 bilhão de barris em reservas estratégicas e reduzir suas importações de petróleo em 32% no segundo trimestre.</p>
+    <p></p>
   </div>
 
   <div class="secao">
-    <h3>Petrobras</h3>
-    <p>A Petrobras negou impacto socioambiental direto da exploração na Foz do Amazonas, após o Ministério Público Federal pedir a suspensão imediata da licença de perfuração até o cumprimento de medidas em comunidades locais. A companhia informou que recebeu R$ 448 milhões em subvenção à gasolina e acumula R$ 9,9 bilhões em repasses para combustíveis; o conselho também aprovou adesão à nova subvenção de R$ 1 por litro de diesel. O TCU julgará na próxima quarta-feira, em sessão extraordinária e reservada, a política de preços da estatal. Nas ações, a ON recuou 1,09% a R$ 53,41 e a PN caiu 0,23% a R$ 48,50 na sexta-feira, pressionadas pelo recuo do petróleo.</p>
+    <h3>Corporativo</h3>
+    <p></p>
   </div>
-
-  <!-- ═══════════════════════════════════════════
-       TABELA (opcional — remover se não usar)
-       ═══════════════════════════════════════════ -->
-  <!--
-  <div class="secao">
-    <h3>Título da tabela</h3>
-    <table class="tabela">
-      <thead>
-        <tr><th>Coluna 1</th><th>Coluna 2</th><th>Coluna 3</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>dado</td><td>dado</td><td>dado</td></tr>
-      </tbody>
-    </table>
-  </div>
-  -->
-
-  <!-- ═══════════════════════════════════════════
-       GRÁFICO SVG de linha (opcional — remover se não usar)
-       Fórmula y: y = 190 - (valor - 5.00) / 0.40 * 150
-       Ajustar BASE e ESCALA conforme o range dos dados
-       ═══════════════════════════════════════════ -->
-  <!--
-  <div class="secao">
-    <h3>Título do gráfico</h3>
-    <div class="grafico-wrap">
-      <svg viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
-        <polyline
-          fill="none"
-          stroke="#12333F"
-          stroke-width="2"
-          points="
-            50,190
-            150,150
-            250,120
-            350,100
-            450,80
-            550,60
-          "
-        />
-      </svg>
-    </div>
-  </div>
-  -->
 
 </div>
 
 <footer>
-  Bom Dia Mercado · 22/09/2025
+Bom Dia Mercado · 21/09/2026
 </footer>
 
 </body>
