@@ -1,55 +1,45 @@
-name: Gerar Relatório
+name: Gerar Bom Dia Mercado
 
 on:
   issues:
     types: [opened]
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   gerar:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      issues: write
-
     steps:
-      - name: Checkout
+      - name: Baixar repositório
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Preparar Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11'
+          python-version: "3.12"
 
       - name: Instalar dependências
         run: pip install anthropic
 
-      - name: Gerar HTML
+      - name: Gerar relatório
         env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_BODY: ${{ github.event.issue.body }}
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: python gerar.py
 
-      - name: Commit e push
+      - name: Publicar index.html
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           git add index.html
-          if git diff --staged --quiet; then
-            echo "Nada mudou, nada a commitar."
-          else
-            git commit -m "Bom Dia Mercado - atualizacao automatica"
-            git push
-          fi
+          git commit -m "Bom Dia Mercado: ${{ github.event.issue.title }}" || echo "Sem mudanças"
+          git push
 
-      - name: Apagar corpo da issue e fechar
-        uses: actions/github-script@v7
-        with:
-          script: |
-            await github.rest.issues.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              issue_number: context.issue.number,
-              body: '(conteúdo removido automaticamente)',
-              state: 'closed'
-            })
+      - name: Fechar a issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh issue close ${{ github.event.issue.number }} --comment "Relatório publicado em https://bomdiamercado.github.io/Bom-Dia-Mercado/"
